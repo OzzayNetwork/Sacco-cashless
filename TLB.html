@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- icon files -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+    <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+    <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+    <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
+
+
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" href="vendors/slick/slick.css" />
+    <link rel="stylesheet" href="vendors/slick/slick-theme.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/top-navigation.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+
+</head>
+
+<body data-ma-theme="green">
+    <main class="main">
+        <div class="page-loader">
+            <div class="page-loader__spinner">
+                <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+            </div>
+            <span class="powerd-container">
+					<img src="demo/img/logo-files/NBk.png">
+					<strong>POWERED BY NBK</strong>
+				</span>
+        </div>
+
+        <header class="header">
+
+            <div class="navigation-trigger" data-ma-action="aside-open" data-ma-target=".sidebar">
+                <div class="navigation-trigger__inner">
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                </div>
+            </div>
+
+                <div class="header__logo">
+                    <img src="demo/img/logo-files/fav-icon.png">
+                    <h1>
+                        <a href="index.html" class="mb-3">Parking Dashboard</a>
+                        <p class="mb-0 text-black font-weight-light text-capitalize">RevenueSure</p>
+                    </h1>
+                </div>
+
+            <ul class="top-nav nav-amounts">
+
+                <li class="mr-4">
+                    <span class="text-uppercase font-11px">Yesterday</span>
+                    <h5 class="text-uppercase font-weight-bold pb-0" id="yestedays_revenue">Kes 21,235,000</h5>
+                </li>
+
+                <li class="border-left border-white-opacity-7 pl-4">
+                    <span class=" text-uppercase font-11px d-flex align-items-center" style="height: 19px;">Today 
+                            <i class="ml-2 text-success zmdi zmdi-caret-up font-22rem" id="rev_diff_img"></i></span>
+                    <h5 class="text-uppercase font-weight-bold pb-0" id="todays_revenue">Kes 21,235,000</h5>
+
+                </li>
+
+            </ul>
+
+
+            <form class="search">
+                <div class="search__inner">
+                    <input type="text" class="search__text" placeholder="Search for people, files, documents...">
+                    <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                </div>
+            </form>
+
+            <ul class="top-nav">
+                <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+
+
+                <li class="hidden-xs-down mr-3 ml-4">
+                    <a href="map.html" class="p-3">
+                        <i class="zmdi zmdi-pin mr-2"></i>
+                    </a>
+                </li>
+
+
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="rad-50"><img src="demo/img/profile-pics/1.jpg" class="listview__img m-0" style="height: 32px;" alt="profile picture"></a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
+                        <div class="listview listview--hover acc-options">
+
+                            <a href="#" class="listview__item">
+                                <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="profile picture">
+
+                                <div class="listview__content">
+                                    <div class="listview__heading">
+                                        John Doe
+                                    </div>
+                                    <p>johndoe@email.com</p>
+                                </div>
+                            </a>
+                            <hr>
+                            <div class="listview__item">
+                                <div class="listview__content">
+                                    <div class="listview__heading">
+                                        <a><i class="ti-unlock"></i><span>Change Password</span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="listview__item">
+                                <div class="listview__content">
+                                    <div class="listview__heading">
+                                        <a><i class="ti-power-off"></i><span>Logout</span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <ul class="top-menu">
+                <div class="todays_highlights">
+                    <span class="text-uppercase"><span class="text-warning-2">Today's Highlights</span></span>
+                </div>
+
+                <div class="todays-entries">
+                    <a class="todays-entries-text">Logged Vehicles: <strong>17,450</strong><span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">Car Queries: <strong>3,231</strong> <span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">Compliant: <strong>3,201</strong> <span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">Non-Compliant: <strong>30</strong> <span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">Due Clamping : <strong>11</strong><span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">Clamped: <strong>19</strong><span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">Enclosed Parking Revenue : <strong>KES 108,568</strong><span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-text">County Bus Revenue: <strong>KES 195,000</strong><span class="opacity-5"> | </span></a>
+                    <a class="todays-entries-texts">Inactive Agents: 
+                            <strong>195 (<span id="agent_percentage" class="mx-1">70</span><span id="agent_percentage_sign">%</span>)</strong>
+                                <span class="opacity-5"> | </span>
+                            </a>
+                </div>
+
+            </ul>
+        </header>
+        <aside class="sidebar px-0 pt-0">
+            <div class="scrollbar-inner">
+                <div class="user">
+                    <div class="user__info" data-toggle="dropdown">
+                        <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
+                        <div>
+                            <div class="user__name">Malinda Hollaway</div>
+                            <div class="user__email">malinda-h@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">View Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+
+                <ul class="navigation">
+                    <li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart"></i>Dashboard</a></li>
+                    <li class="navigation__active"><a href="map.html"><i class="zmdi zmdi-pin"></i>Map View</a></li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-parking-7"></i>On Street Parking <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+                            <li><a href="Compliant.html"><i class="zmdi zmdi-check mx-2"></i>Compliant</a></li>
+                            <li><a href="Non-Compliant.html"><i class="flaticon-traffic mx-2"></i>Non Compliant</a></li>
+                            <li><a href="Clamped.html"><i class="flaticon-password mx-2"></i>Clamped</a></li>
+                            <li><a href="Unclamped.html"><i class="flaticon-key-5 mx-2"></i>Unclamped</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-parking-8"></i>Off Street Parking <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="Sunken.html"><i class="flaticon-parking-5 mx-2"></i>Sunken</a></li>
+                            <li><a href="LawCourt.html"><i class="flaticon-parking-area mx-2"></i>Law Courts</a></li>
+                            <li><a href="CountryBus.html"><i class="flaticon-road    mx-2"></i>Country Bus</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="">
+                        <a href="Seasonal.html"><i class="flaticon-calendar"></i>Seasonal Parking</a>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-key-2"></i>Enforcement <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="TLB.html"><i class="flaticon-hook mx-2"></i>TLB</a></li>
+                            <li><a href="CarPark.html"><i class="flaticon-parking-2 mx-2"></i>Car Park</a></li>
+                            <li><a href="LoadingZones.html"><i class="flaticon-box mx-2"></i>Loading Zones</a></li>
+                            <li><a href="Registration.html"><i class="flaticon-report mx-2"></i>Registration</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-article"></i>Report <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="Attendants_Report.html"><i class="flaticon-smartphone mx-2"></i>Attendants</a></li>
+                            <li><a href="DailyReports.html"><i class="flaticon-report mx-2"></i>Day</a></li>
+                            <li><a href="ZonalReports.html"><i class="flaticon-parking mx-2"></i>Parking Zones</a></li>
+                            <li><a href="StreetReport.html"><i class="flaticon-road mx-2"></i>Street</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="zmdi zmdi-money"></i>Collections <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="AttendantsCollection.html">Attendants</a></li>
+                            <li><a href="ZonalStreetCollection.html">Zones & Street</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-shield"></i>Perform Waivers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="Waivers.html">Waivers</a></li>
+                            <li><a href="Extended.html">Extended</a></li>
+                        </ul>
+                    </li>
+
+                         <li class="navigation__active mt-1"><a href="landing.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="content parking_body custom-table-container content content--full">
+
+            <header class="content__title px-0 border-0">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Impounding Car(TLB)</h1>
+							</span>
+                        <div class="">
+                            <ol class="breadcrumb border-0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Enforcement</a></li>
+                                <li class="breadcrumb-item active">TLB</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="actions date_container">
+                        <div id="reportrange" style="background: #f3f3f3; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                            <i class="ti-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div>
+                        <button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+                    </div>
+            </header>
+
+
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="card ">
+                        <div class="card-body">
+                            <div class="table-responsive border p-4">
+                                <table class="table table-striped mb-0" id="data-table">
+                                    <thead class=" thead-light">
+                                        <tr>
+                                            <th>Bill Number</th>
+                                            <th>Identifier</th>
+                                            <th>Client Name</th>
+                                            <th>Zone</th>
+                                            <th>Amount(KES)</th>
+                                            <th>Time(M/D/Y)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td><a href="">PC1901-100033</a></td>
+                                            <td class="text-capitalize">126061</td>
+                                            <td class="text-capitalize">Mtu Mwerevu Sana</td>
+                                            <td class="text-capitalize">CBD</td>
+                                            <td class="text-capitalize">15,000.00</td>
+                                            <td class="text-capitalize">1st Jun 2020:08:54:20 AM</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Older IE warning message -->
+    <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+
+    <!-- Javascript -->
+    <!-- ../vendors -->
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/popper.js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+    <script src="vendors/flot/jquery.flot.js"></script>
+    <script src="vendors/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendors/salvattore/salvattore.min.js"></script>
+    <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/daterangepicker/daterangepicker.min.js"></script>
+    <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+
+    <!-- Charts and maps-->
+    <script src="demo/js/flot-charts/curved-line.js"></script>
+    <script src="demo/js/flot-charts/dynamic.js"></script>
+    <script src="demo/js/flot-charts/line.js"></script>
+    <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+    <script src="demo/js/other-charts.js"></script>
+    <script src="demo/js/jqvmap.js"></script>
+
+
+    <!-- Highchart Scripts Vendors -->
+    <script src="vendors/highcharts/highchart.js"></script>
+
+    <script src="vendors/highcharts/data.js"></script>
+    <script src="vendors/highcharts/drilldown.js"></script>
+    <script src="vendors/highcharts/exporting.js"></script>
+    <script src="vendors/highcharts/export-data.js"></script>
+    <script src="vendors/highcharts/accesibility.js"></script>
+    <script src="vendors/highcharts/item-series.js"></script>
+    <script src="vendors/highcharts/streamgraph.js"></script>
+    <script src="vendors/highcharts/series-label.js"></script>
+    <script src="vendors/highcharts/annotations.js"></script>
+    <script src="vendors/slick/slick.min.js"></script>
+
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+
+    <!-- Vendors: Data tables -->
+    <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+    <script src="vendors/jszip/jszip.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+
+
+    <!-- Highchart Scripts js -->
+    <script src="js/highcharts/theme1.js"></script>
+    <script src="js/highcharts/bullet.js"></script>
+
+
+    <!-- HighCharts -->
+    <script src="js/chart-data/zonal-revenue-collection.js"></script>
+    <script src="js/chart-data/hourly-revenue-collection.js"></script>
+    <script src="js/chart-data/clamped-data.js"></script>
+    <script src="js/chart-data/clamped-detailed.js"></script>
+
+    <!-- App functions and actions -->
+    <script src="js/app.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/top-navigation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:35:00 GMT -->
+
+</html>

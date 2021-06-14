@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/top-navigation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:35:00 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>SwedKen | Dashboard</title>
+    <link rel="icon" href="demo/img/logo-files/nouv_logo.png" type="image/x-icon" <!-- icon files -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+    <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendors/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+    <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+    <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
+
+
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" href="vendors/slick/slick.css" />
+    <link rel="stylesheet" href="vendors/slick/slick-theme.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/top-navigation.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+
+</head>
+
+<body data-ma-theme="green">
+    <main class="main main--alt">
+        <div class="page-loader">
+            <div class="page-loader__spinner">
+                <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="navigation-trigger" data-ma-action="aside-open" data-ma-target=".sidebar">
+                <div class="navigation-trigger__inner">
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                </div>
+            </div>
+
+            <div class="header__logo">
+                <img src="demo/img/logo-files/logo-white_swed.png" class="img-fluid">
+            </div>
+
+
+            <form class="search">
+                <div class="search__inner">
+                    <input type="text" class="search__text" placeholder="Search for people, files, documents...">
+                    <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                </div>
+            </form>
+
+            <ul class="top-nav">
+                <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+                <li class="hidden-xs-down"><a href="scheduled-rides.html"><i class="zmdi zmdi-calendar-note"></i></a></li>
+                <li class="hidden-xs-down mr-1 ml-1"><a href="#"><i class="zmdi zmdi-notifications-active"></i></a></li>
+                <li class="hidden-xs-down mr-1 ml-1"> <a href="#" class="p-3"><i class="zmdi zmdi-file-text mr-2"></i></a></li>
+
+
+
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="rad-50"><img src="demo/img/profile-pics/1.jpg" class="listview__img m-0" style="height: 32px;" alt="profile picture"></a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
+                        <div class="listview listview--hover acc-options">
+
+                            <a href="#" class="listview__item">
+                                <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="profile picture">
+
+                                <div class="listview__content">
+                                    <div class="listview__heading">
+                                        John Doe
+                                    </div>
+                                    <p>johndoe@email.com</p>
+                                </div>
+                            </a>
+                            <hr>
+                            <div class="listview__item">
+                                <div class="listview__content">
+                                    <div class="listview__heading">
+                                        <a><i class="ti-unlock"></i><span>Change Password</span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="listview__item">
+                                <div class="listview__content">
+                                    <div class="listview__heading">
+                                        <a><i class="ti-power-off"></i><span>Logout</span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </header>
+
+        <aside class="sidebar px-0 pt-0">
+            <div class="scrollbar-inner">
+                <div class="user">
+                    <div class="user__info" data-toggle="dropdown">
+                        <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
+                        <div>
+                            <div class="user__name">Malinda Hollaway</div>
+                            <div class="user__email">malinda-h@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">View Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+
+                <ul class="navigation">
+                    <li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart"></i>Dashboard</a></li>
+                    <li class="navigation__active"><a href="map-view.html"><i class="mdi mdi-google-maps"></i>Map View</a></li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-car-settings"></i>Registration <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+                            <li><a href="owner-registration.html"><i class="mdi mdi-car-3-plus mx-2"></i>Owner</a></li>
+                            <li><a href="vehicle-registration.html"><i class="flaticon-car-1 mx-2"></i>Vehicle</a></li>
+                            <li><a href="driver-registration.html"><i class="mdi mdi-car-key mx-2"></i>Driver</a></li>
+                            <li><a href="client-registration.html"><i class="mdi mdi-account-multiple-plus-outline mx-2"></i>Client</a></li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-folder-edit-outline"></i>Packages <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+                            <li><a href="packages-setup.html"><i class="mdi mdi-folder-edit-outline mx-2"></i>Packages</a></li>
+                            <li><a href="packages.html"><i class="mdi mdi-folder-multiple-outline mx-2"></i>Packages List</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub"><a href="#"><i class="mdi mdi-car"></i>Vehicles <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+                            <li class="navigation__sub">
+                                <a href="#"><i class="mdi mdi-car-traction-control mx-2"></i>Rides <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                                <ul class="ml-4">
+                                    <li><a href="scheduled-rides.html"><i class="zmdi zmdi-check mx-2"></i>Scheduled Rides</a></li>
+                                    <li><a href="requested-rides.html"><i class="zmdi zmdi-check mx-2"></i>Requested Rides</a></li>
+                                    <li><a href="completed-rides.html"><i class="zmdi zmdi-check mx-2"></i>Completed Rides</a></li>
+                                    <li><a href="assigned-rides.html"><i class="zmdi zmdi-check mx-2"></i>Assigned Rides</a></li>
+                                    <li><a href="unassigned-rides.html"><i class="zmdi zmdi-check mx-2"></i>Unassigned Rides</a></li>
+                                    <li><a href="accepted-rides.html"><i class="zmdi zmdi-check mx-2"></i>Accepted Rides</a></li>
+                                    <li><a href="cancelled-rides.html"><i class="zmdi zmdi-check mx-2"></i>Cancelled Rides</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="navigation__sub">
+                                <a href="#"><i class="mdi mdi-tools mx-2"></i>Maintenance <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                                <ul class="ml-4">
+                                    <li><a href="schedule-maintenance.html"><i class="zmdi zmdi-check mx-2"></i>Create</a></li>
+                                    <li><a href="scheduled-maintenance.html"><i class="zmdi zmdi-check mx-2"></i>Schedule</a></li>
+                                    <li><a href="under-maintenance.html"><i class="zmdi zmdi-check mx-2"></i>Under Maintenance</a></li>
+                                    <li><a href="maintenance-recommendations.html"><i class="zmdi zmdi-check mx-2"></i>Recommendations</a></li>
+                                    <li><a href="maintenance-history.html"><i class="zmdi zmdi-check mx-2"></i>History</a></li>
+                                </ul>
+                            </li>
+                            <li class="navigation__sub">
+                                <a href="#"><i class="mdi mdi-fuel mx-2"></i>Fueling <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                                <ul class="ml-4">
+                                    <li><a href="create-fueling-stations.html"><i class="zmdi zmdi-check mx-2"></i>Register</a></li>
+                                    <li><a href="fueling-stations.html"><i class="zmdi zmdi-check mx-2"></i>Stations</a></li>
+                                    <li><a href="fueling-history.html"><i class="zmdi zmdi-check mx-2"></i>History</a></li>
+                                </ul>
+                            </li>
+                            <li class="navigation__sub">
+                                <a href="#"><i class="mdi mdi-circle-multiple-outline mx-2"></i>Assigning <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                                <ul class="ml-4">
+                                    <li><a href="assign-vehicles.html"><i class="mdi mdi-circle-edit-outline mx-2"></i>Assign</a></li>
+                                    <li><a href="unassign-vehicles.html"><i class="mdi mdi-circle-off-outline mx-2"></i>Unassigned</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-car-shift-pattern"></i>Drivers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+                            <li><a href="available-drivers.html"><i class="zmdi zmdi-check mx-2"></i>Available</a></li>
+                            <li><a href="unavailable-drivers.html"><i class="zmdi zmdi-check mx-2"></i>Unavailable</a></li>
+                            <li><a href="discipline-records.html"><i class="zmdi zmdi-check mx-2"></i>Discipline</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-chart-tree"></i>Reports <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+
+                            <li class="navigation__sub">
+                                <a href="#"><i class="mdi mdi-cash mx-2"></i>Bills <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                                <ul class="ml-4">
+                                    <li><a href="cleared-bills.html"><i class="zmdi zmdi-check mx-2"></i>Cleared Bills</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="navigation__sub">
+                                <a href="#"><i class="mdi mdi-car-settings mx-2"></i>Vehicles <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                                <ul class="ml-4">
+                                    <li><a href="all_vehicles.html"><i class="zmdi zmdi-check mx-2"></i>All</a></li>
+                                    <li><a href="active-vehicles.html"><i class="flaticon-car-1 mx-2"></i>Active</a></li>
+                                    <li><a href="inactive-vehicles.html"><i class="flaticon-car-alarm mx-2"></i>Inactive</a></li>
+                                    <li><a href="ontransit-vehicles.html"><i class="flaticon-traffic mx-2"></i>Ontransit</a></li>
+                                    <li><a href="available-vehicles.html"><i class="flaticon-car-insurance mx-2"></i>Available</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="packages.html"><i class="mdi mdi-folder-multiple-outline mx-2"></i>Packages</a></li>
+                            <li><a href="owners.html"><i class="mdi mdi-account-box-multiple-outline mx-2"></i>Owners</a></li>
+                            <li><a href="drivers.html"><i class="mdi mdi-card-account-details-outline mx-2"></i>Drivers</a></li>
+                            <li><a href="rides.html"><i class="mdi mdi-car-traction-control mx-2"></i>Rides</a></li>
+                            <li><a href="booked-dates.html"><i class="mdi mdi-calendar-multiple mx-2"></i>Booked Dates</a></li>
+                            <li><a href="clients.html"><i class="mdi mdi-account-group-outline mx-2"></i>Clients</a></li>
+                            <li><a href="transactions.html"><i class="mdi mdi-file-document-multiple-outline mx-2"></i>Transactions</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="zmdi zmdi-account"></i>My Account <i class="zmdi zmdi-caret-down drop-down-icon pt-0"></i></a>
+                        <ul>
+                            <li><a href="my-profile.html"><i class="pe-7s-id mr-2"></i>My profile</a></li>
+                            <li><a href="account-logs.html"><i class="icon_hourglass mr-2"></i>Account Logs</a></li>
+                            <li><a href="deligate.html"><i class="pe-7s-portfolio mr-2"></i>Delegate role</a></li>
+                            <li><a href="my-delegations.html"><i class="zmdi zmdi-case-check mr-2"></i>My Delegations</a></li>
+                            <li><a href="password.html"><i class="mdi mdi-account-key mr-2"></i>Change password</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="ti-settings"></i>Setup<i class="zmdi zmdi-caret-down drop-down-icon pt-0"></i></a>
+                        <ul>
+                            <li class="navigation__sub">
+                                <a href="#"><i class="flaticon-friends"></i>User Accounts<i class="zmdi zmdi-caret-down drop-down-icon pt-0"></i></a>
+                                <ul class="ml-3">
+                                    <li><a href="new-user.html"><i class="flaticon-add-user mr-2"></i>New user</a></li>
+                                    <li><a href="active-users.html"><i class="zmdi zmdi-check-all mr-2"></i>Active users</a></li>
+                                    <li><a href="blocked-users.html"><i class="zmdi zmdi-block mr-2"></i>Inactive users</a></li>
+                                    <li><a href="user-management.html"><i class="zmdi zmdi-settings mr-2"></i>User Management</a></li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="navigation__active mt-1"><a href="landing.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Modal -->
+        <!--Car Photo -->
+        <div class="modal fade" id="car-photo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">NISSAN-Tiida KAA 131D</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/sedan.jpg" class="car-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Booking -->
+        <div class="modal fade" id="deactivate-car" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Delete ST-2020-01-31</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <h5>Are you sure you want to delete this ride?</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-4">
+                                <div class="form-group">
+                                    <label>Reason<strong class="text-danger">*</strong></label>
+                                    <textarea class="form-control validate" minlength="2" placeholder="Enter reason to delete scheduled ride" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Yes, Delete Ride</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Booking -->
+        <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Vehicle Details for KAA 131D</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Make changes to initially submitted Details</p>
+                        <form class="with-mpesa animated fade-in">
+                            <div class="row">
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Car Model</strong>  <strong class="text-danger">*</strong>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter Car Model" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Car Color</strong>  <strong class="text-danger">*</strong>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter Car Color" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Car Year</strong>  <strong class="text-danger">*</strong>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter Car Year" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Select No. of Passangers</strong>  <strong class="text-danger">*</strong>
+                                            <p class="d-none"><small>Select no. of passangers</small></p>
+                                        </label>
+                                        <select class="selectpicker form-control show-tick" title="Passangers" data-live-search="true">
+                                            <option data-tokens="option 1">1</option>
+                                            <option data-tokens="option 2">2</option>
+                                            <option data-tokens="option 3">3</option>
+                                            <option data-tokens="option 4">4</option>  
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Select Car Status</strong>  <strong class="text-danger">*</strong>
+                                            <p class="d-none"><small>Select no. of passangers</small></p>
+                                        </label>
+                                        <select class="selectpicker form-control show-tick" title="Car Status" data-live-search="true">
+                                            <option data-tokens="option 1">Available</option>
+                                            <option data-tokens="option 2">Intransit</option>
+                                            <option data-tokens="option 3">Available</option>
+                                            <option data-tokens="option 4">Inactive</option>  
+                                        </select>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Select Car Type</strong>  <strong class="text-danger">*</strong>
+                                            <p class="d-none"><small>Select car type from options below</small></p>
+                                        </label>
+                                        <select class="selectpicker form-control show-tick" title="Car type" data-live-search="true">
+                                            <option data-tokens="option 1">Sedan</option>
+                                            <option data-tokens="option 2">S-Wagon</option>
+                                            <option data-tokens="option 3">Pick-up</option>
+                                            <option data-tokens="option 4">Mini Van</option>  
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label><strong>Last Ride Date</strong> <strong class="text-danger">*</strong></label>
+                                        <div class="actions d-flex">
+                                            <div id="reportrange" style="cursor: pointer; padding: 10px 10px; border: 1px solid #ccc; width: 100%">
+                                                <i class="ti-calendar"></i>&nbsp;
+                                                <span></span> <i class="fa fa-caret-down"></i>
+                                            </div>
+                                            <button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Driver's Name</strong>  <strong class="text-danger">*</strong>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter driver's name" required>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Driver's Contact</strong>  <strong class="text-danger">*</strong>
+                                            <p class="d-none"><small>Enter driver's contact</small></p>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter driver's contact" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Owner's Name</strong>  <strong class="text-danger">*</strong>
+                                            <p class="d-none"><small>Enter number of occupants</small></p>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter number of owner" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            <strong>Owner's Contact</strong>  <strong class="text-danger">*</strong>
+                                            <p class="d-none"><small>Enter number of occupants</small></p>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter owner's contact" required>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Dismiss</button>
+                        <button type="button" class="btn btn-success btn--icon-text"> <i class="zmdi zmdi-check" ></i>Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Booking -->
+        <div class="modal fade" id="car-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Maintenance Details for KAA 131D</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="with-mpesa animated fade-in">
+                            <div class="row">
+
+                                <div class="col-sm-12">
+                                    <p class=""><small>Vehicle</small></p>
+                                    <strong>NISSAN Tiida</strong>
+                                    <hr>
+
+                                    <p class=""><small>Issue</small></p>
+                                    <strong>Insurance Expires on the 23 May 2020</strong>
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class=""><small>Reported Date</small></p>
+                                            <strong>1 Aug 2020 03:15PM</strong>
+                                            <hr>
+                                        </div>
+
+
+                                        <div class="col-6">
+                                            <p class=""><small>Date Resolved</small></p>
+                                            <strong>1 Aug 2020 03:15PM</strong>
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="">
+                                                <p class=""><small>Reported By</small></p>
+                                                <strong>Mr Mkubwa</strong>
+                                                <hr>
+
+                                                <p class=""><small>Contact</small></p>
+                                                <strong><p><a href="mailto:sherehe@email.com">mkubwa@email.com</a></p></strong>
+                                                <strong><p><a href="tel:+254 712 345 678">+254 712 345 678</a></p></strong>
+                                            </div>
+                                            <hr>
+                                        </div>
+
+
+                                        <div class="col-6">
+                                            <div class="">
+                                                <p class=""><small>Resolved By</small></p>
+                                                <strong>Mr Mwenyewe</strong>
+                                                <hr>
+
+                                                <p class=""><small>Contact</small></p>
+                                                <strong><p><a href="mailto:sherehe@email.com">mwenyewe@email.com</a></p></strong>
+                                                <strong><p><a href="tel:+254 712 345 678">+254 712 345 678</a></p></strong>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6 class="text-left"><strong>Cost Estimate</strong></h6>
+                                            <h3 class="text-left">KES 10,500</h3>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+
+
+        <section class="content">
+            <div class="px-0 border-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12 mb-0 float-left p-0">
+                            <h2 class="p-0 mb-0 cl">Maintenance History Report</h2>
+                            <div class="">
+                                <ol class="breadcrumb border-0">
+                                    <li class="breadcrumb-item">Home</li>
+                                    <li class="breadcrumb-item">Rides</li>
+                                    <li class="breadcrumb-item active">Maintenance History</li>
+
+                                </ol>
+
+                            </div>
+                        </div>
+
+                        <div class="activation-form-container">
+                            <form class="">
+                                <div class="card-header row mx-0">
+
+                                </div>
+
+                                <div class="form-body card">
+                                    <div class="card-body">
+                                        <div class="table-responsive border p-4">
+                                            <table class="table table-striped mt-4" id="data-table">
+                                                <thead class=" thead-light">
+                                                    <tr>
+                                                        <th>Maintenance No</th>
+                                                        <th>Vehicle</th>
+                                                        <th>Issue/Problem</th>
+                                                        <th>Reported Date</th>
+                                                        <th>Date Resolved</th>
+                                                        <th>Reported By</th>
+                                                        <th>Resolved By</th>
+                                                        <th>Actions</th>
+
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>MV-2020-01-31</td>
+                                                        <td class="d-flex align-items-center flex-column">
+                                                            <p>KAA 131D</p>
+                                                        </td>
+                                                        <td>Expired Insurance</td>
+                                                        <td>22 May 2020 10:02AM</td>
+                                                        <td>1 Aug 2020 03:15PM</td>
+                                                        <td>Devere Mkubwa</td>
+                                                        <td class="w60">James Mwenyewe</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#car-details"><i class="zmdi zmdi-eye"></i>Details</button>
+                                                            <button type="button" class="btn btn-success btn-sm btn--icon-text ml-2"><i class="zmdi zmdi-print"></i>Print</button>
+                                                            <button type="button" class="btn btn-warning btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#edit-car-booking"><i class="zmdi zmdi-edit"></i>Edit</button>
+                                                            <button type="button" class="btn btn-danger btn-sm btn--icon-text ml-2 deactivate-car" title="delete this car" data-toggle="modal" data-target="#deactivate-car"><i class="zmdi zmdi-block"></i>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>MV-2020-01-31</td>
+                                                        <td class="d-flex align-items-center flex-column">
+                                                            <p>KAA 131D</p>
+                                                        </td>
+                                                        <td>Expired Insurance</td>
+                                                        <td>22 May 2020 10:02AM</td>
+                                                        <td>1 Aug 2020 03:15PM</td>
+                                                        <td>Devere Mkubwa</td>
+                                                        <td class="w60">James Mwenyewe</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#car-details"><i class="zmdi zmdi-eye"></i>Details</button>
+                                                            <button type="button" class="btn btn-success btn-sm btn--icon-text ml-2"><i class="zmdi zmdi-print"></i>Print</button>
+                                                            <button type="button" class="btn btn-warning btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#edit-car-booking"><i class="zmdi zmdi-edit"></i>Edit</button>
+                                                            <button type="button" class="btn btn-danger btn-sm btn--icon-text ml-2 deactivate-car" title="delete this car" data-toggle="modal" data-target="#deactivate-car"><i class="zmdi zmdi-block"></i>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>MV-2020-01-31</td>
+                                                        <td class="d-flex align-items-center flex-column">
+                                                            <p>KAA 131D</p>
+                                                        </td>
+                                                        <td>Expired Insurance</td>
+                                                        <td>22 May 2020 10:02AM</td>
+                                                        <td>1 Aug 2020 03:15PM</td>
+                                                        <td>Devere Mkubwa</td>
+                                                        <td class="w60">James Mwenyewe</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#car-details"><i class="zmdi zmdi-eye"></i>Details</button>
+                                                            <button type="button" class="btn btn-success btn-sm btn--icon-text ml-2"><i class="zmdi zmdi-print"></i>Print</button>
+                                                            <button type="button" class="btn btn-warning btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#edit-car-booking"><i class="zmdi zmdi-edit"></i>Edit</button>
+                                                            <button type="button" class="btn btn-danger btn-sm btn--icon-text ml-2 deactivate-car" title="delete this car" data-toggle="modal" data-target="#deactivate-car"><i class="zmdi zmdi-block"></i>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>MV-2020-01-31</td>
+                                                        <td class="d-flex align-items-center flex-column">
+                                                            <p>KAA 131D</p>
+                                                        </td>
+                                                        <td>Expired Insurance</td>
+                                                        <td>22 May 2020 10:02AM</td>
+                                                        <td>1 Aug 2020 03:15PM</td>
+                                                        <td>Devere Mkubwa</td>
+                                                        <td class="w60">James Mwenyewe</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#car-details"><i class="zmdi zmdi-eye"></i>Details</button>
+                                                            <button type="button" class="btn btn-success btn-sm btn--icon-text ml-2"><i class="zmdi zmdi-print"></i>Print</button>
+                                                            <button type="button" class="btn btn-warning btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#edit-car-booking"><i class="zmdi zmdi-edit"></i>Edit</button>
+                                                            <button type="button" class="btn btn-danger btn-sm btn--icon-text ml-2 deactivate-car" title="delete this car" data-toggle="modal" data-target="#deactivate-car"><i class="zmdi zmdi-block"></i>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>MV-2020-01-31</td>
+                                                        <td class="d-flex align-items-center flex-column">
+                                                            <p>KAA 131D</p>
+                                                        </td>
+                                                        <td>Expired Insurance</td>
+                                                        <td>22 May 2020 10:02AM</td>
+                                                        <td>1 Aug 2020 03:15PM</td>
+                                                        <td>Devere Mkubwa</td>
+                                                        <td class="w60">James Mwenyewe</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#car-details"><i class="zmdi zmdi-eye"></i>Details</button>
+                                                            <button type="button" class="btn btn-success btn-sm btn--icon-text ml-2"><i class="zmdi zmdi-print"></i>Print</button>
+                                                            <button type="button" class="btn btn-warning btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#edit-car-booking"><i class="zmdi zmdi-edit"></i>Edit</button>
+                                                            <button type="button" class="btn btn-danger btn-sm btn--icon-text ml-2 deactivate-car" title="delete this car" data-toggle="modal" data-target="#deactivate-car"><i class="zmdi zmdi-block"></i>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>MV-2020-01-31</td>
+                                                        <td class="d-flex align-items-center flex-column">
+                                                            <p>KAA 131D</p>
+                                                        </td>
+                                                        <td>Expired Insurance</td>
+                                                        <td>22 May 2020 10:02AM</td>
+                                                        <td>1 Aug 2020 03:15PM</td>
+                                                        <td>Devere Mkubwa</td>
+                                                        <td class="w60">James Mwenyewe</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#car-details"><i class="zmdi zmdi-eye"></i>Details</button>
+                                                            <button type="button" class="btn btn-success btn-sm btn--icon-text ml-2"><i class="zmdi zmdi-print"></i>Print</button>
+                                                            <button type="button" class="btn btn-warning btn-sm btn--icon-text ml-2" data-toggle="modal" data-target="#edit-car-booking"><i class="zmdi zmdi-edit"></i>Edit</button>
+                                                            <button type="button" class="btn btn-danger btn-sm btn--icon-text ml-2 deactivate-car" title="delete this car" data-toggle="modal" data-target="#deactivate-car"><i class="zmdi zmdi-block"></i>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Older IE warning message -->
+    <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+    <!-- Javascript -->
+    <!-- ../vendors -->
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/popper.js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+    <script src="vendors/flot/jquery.flot.js"></script>
+    <script src="vendors/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendors/salvattore/salvattore.min.js"></script>
+    <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/daterangepicker/daterangepicker.min.js"></script>
+    <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+
+    <!-- Charts and maps-->
+    <script src="demo/js/flot-charts/curved-line.js"></script>
+    <script src="demo/js/flot-charts/dynamic.js"></script>
+    <script src="demo/js/flot-charts/line.js"></script>
+    <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+    <script src="demo/js/other-charts.js"></script>
+    <script src="demo/js/jqvmap.js"></script>
+
+
+    <!-- Highchart Scripts Vendors -->
+    <script src="vendors/highcharts/highchart.js"></script>
+
+    <script src="vendors/highcharts/data.js"></script>
+    <script src="vendors/highcharts/drilldown.js"></script>
+    <script src="vendors/highcharts/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- optional -->
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <script src="vendors/highcharts/accesibility.js"></script>
+    <script src="vendors/highcharts/item-series.js"></script>
+    <script src="vendors/highcharts/streamgraph.js"></script>
+    <script src="vendors/highcharts/series-label.js"></script>
+    <script src="vendors/highcharts/annotations.js"></script>
+    <script src="vendors/slick/slick.min.js"></script>
+
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <!-- Vendors: Data tables -->
+    <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+    <script src="vendors/jszip/jszip.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+
+    <!-- Highchart Scripts js -->
+    <script src="js/highcharts/theme1.js"></script>
+    <script src="js/highcharts/bullet.js"></script>
+
+
+    <!-- HighCharts -->
+    <script src="js/chart-data/zonal-revenue-collection.js"></script>
+    <script src="js/chart-data/hourly-revenue-collection.js"></script>
+    <script src="js/chart-data/clamped-data.js"></script>
+    <script src="js/chart-data/clamped-detailed.js"></script>
+
+    <!-- App functions and actions -->
+    <script src="js/app.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/top-navigation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:35:00 GMT -->
+
+</html>
