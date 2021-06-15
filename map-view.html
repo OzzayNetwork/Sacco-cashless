@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>SwedKen | Dashboard</title>
+    <title>Fleetfix Cashless matatu</title>
     <link rel="icon" href="demo/img/logo-files/nouv_logo.png" type="image/x-icon" <!-- icon files -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
@@ -302,7 +302,7 @@
                         </div>
                     </div>
                     <div class="map-cont-header">
-                        <h2 class="chat__title">New point of interest<small>Use this section to add a new point of interest on the map</small></h2>
+                        <h2 class="chat__title">New point of interest<small>Provide details on the new location bellow</small></h2>
                         <i class="zmdi zmdi-close close-aside"></i>
                     </div>
 
@@ -320,18 +320,16 @@
                             <form class="">
                                 <div class="listview__item ">
                                     <div class="row">
-                                        <div class="col-12">
-                                            <div class="selected-point-details p-3">
+                                        <div class="col-12 pt-4">
+                                            <div class="selected-point-details p-3 mb-5">
                                                 <h6>Point Details</h6>
+
+                                                <p class="mb-0"><strong>Place name</strong></p>
+                                                <p class="clicked-name">The place name</p>
+
 
                                                 <p class="mb-0"><strong>Address</strong></p>
                                                 <p class="clicked-address">The address</p>
-
-                                                <p class="mb-0"><strong>Sub County</strong></p>
-                                                <p class="clicked-subcounty">Starehe</p>
-
-                                                <p class="mb-0"><strong>Ward</strong></p>
-                                                <p class="clicked-ward">Ward name</p>
 
                                                 <p class="mb-0"><strong>Street</strong></p>
                                                 <p class="clicked-street">Tom Mboya street</p>
@@ -347,20 +345,23 @@
 
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="locationCategory" class="mb-0"><strong>Select Point Category</strong></label>
-                                                <p><small>Select the category for with this location belongs.</small></p>
-                                                <select class="form-control" id="locationCategory">
-                                                    <option>-- Select location category --</option>
-                                                    <option>Parking street</option>
-                                                    <option>Off street parking location</option>
-                                                    <option>Revenue/service point</option>
-                                                    <option>Bus park</option>
-                                                </select>
+                                                <label for="locationCategory" class="mb-0"><strong>Location type</strong></label>
+                                                <br>
+                                                <small>Is this a <strong>Stage</strong> or a <strong>pickup Point</strong> location</small>
+                                                <br>
+                                                <div class="radio radio--inline">
+                                                    <input type="radio" name="location_type" id="matatu_stage">
+                                                    <label class="radio__label" for="matatu_stage">Matatu stage</label>
+                                                </div>
+                                                <div class="radio radio--inline">
+                                                    <input type="radio" name="location_type" id="Pickup_point">
+                                                    <label class="radio__label" for="Pickup_point">Pickup Point</label>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="col-12">
-                                            <button class="btn btn-primary">Add Location</button>
+                                            <button class="btn btn-primary btn-block">Add Location</button>
                                         </div>
                                     </div>
 
@@ -646,6 +647,51 @@
                             </div>
 
                         </div>
+
+                        <div class="listview bg-primary">
+                            <div class="listview__item py-2">
+                                <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-map-marker-multiple-outline"></i><span>Pending rides</span></div>
+                            </div>
+
+                        </div>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <td><strong>Time:</strong></td>
+                                    <td><strong>Pickup location</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>8:00 AM</strong></td>
+                                    <td class="text-left text-wrap">
+                                        Tulip house, mombasa road
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>10:15 AM</strong></td>
+                                    <td class="text-left text-wrap">
+                                        90 degrees by tsavo
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>9:00 PM</strong></td>
+                                    <td class="text-left text-wrap">
+                                        Strrathmore university
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>11:02 PM</strong></td>
+                                    <td class="text-left text-wrap">
+                                        Kenyata national hospital
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
 
                         <div href="#" class="listview__item">
                             <div class="listview__content">

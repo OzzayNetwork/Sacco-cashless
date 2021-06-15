@@ -368,142 +368,913 @@
 
                                 <div class="form-body card">
                                     <div class="slider-container1 wow animated active-slider slideInLeft card-body">
-                                        <div class="row clearfix form-gen-information animated fadeInRight">
+                                        <div class="row clearfix form-gen-information animated fadeInRight selextor-cont-z-index">
                                             <div class="col-12">
                                                 <h4 class="card-title">Vehicle information form</h4>
                                                 <h6 class="card-subtitle">Enter the form below. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
                                                 <hr>
                                             </div>
 
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label>Type <strong class="text-danger">*</strong></label>
-                                                    <select class="selectpicker form-control show-tick" title="Vehicle type" placeholder="Vehicle type" data-live-search="true">
-                                                    <option value="motorbike">Motorbike</option>
-                                                    <option value="car">Car</option>
-                                                </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-md-6 car-form">
+                                            <div class="col-sm-12 col-md-4 car-form">
                                                 <div class="form-group">
                                                     <label>Number Plate  <strong class="text-danger">*</strong></label>
                                                     <input type="text" class="form-control validate" pattern="^[a-zA-Z]{2,30}$" minlength="2" autofocus placeholder="Enter Number Plate" required>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group make-component">
-                                                    <label>Make <strong class="text-danger">*</strong></label>
-                                                    <select id="make_select" class="selectpicker form-control show-tick" title="Vehicle make" placeholder="Vehicle make" data-live-search="true">
-                                                        <option value="nissan">Nissan</option>
-                                                        <option value="Toyota">Toyota</option>
-                                                </select>
-
+                                            <div class="col-sm-12 col-md-4 car-form">
+                                                <div class="form-group">
+                                                    <label>Capacity<strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control" minlength="2" autofocus placeholder="Enter max number of passengers" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4 col-sm-12">
-                                                <div class="form-group model-component">
-                                                    <label>Model<strong class="text-danger">*</strong></label>
-                                                    <select id="model_select" class="selectpicker form-control show-tick" title="Vehicle model" placeholder="Vehicle model" data-live-search="true">
-                                                    <option value="1">Tiida</option>
-                                                    <option value="2">Juke</option>
-                                                    <option value="3">Skyline</option>
-                                                    <option value="4">Bluebird</option>
+                                                <div class="form-group">
+                                                    <label>Body Type <strong class="text-danger">*</strong></label>
+                                                    <select class="selectpicker form-control show-tick" title="Select car body type" placeholder="Vehicle type" data-live-search="true">
+                                                    <option value="motorbike">Minibus</option>
+                                                    <option value="car">Wargon</option>
                                                 </select>
                                                 </div>
                                             </div>
 
+                                            <div class="col-sm-12 col-md-4">
+                                                <label>License expiry date</label>
+
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control date-picker  dob1" required placeholder="Pick a date">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12 selextor-cont-z-index">
+                                                <div class="form-group ">
+                                                    <label>Select Owner<strong class="text-danger">*</strong></label>
+                                                    <select class="selectpicker form-control show-tick select-owner-option" data-size="5" title="Select the owner" placeholder="Vehicle type" data-live-search="true">
+                                                        <option value="Add new owner" data-content="<span class='badge badge-success add-owner btn btn-sm btn-info'><i class='zmdi zmdi-plus'></i>Add an Owner</span>"></option>
+                                                        <option value="Kelvin Njuguna" data-subtext="ID:1234587">Kelvin Njuguna</option>
+                                                        <option value="alex wanjala" data-subtext="ID:1234587">Alex wanjala</option>
+                                                        <option value="alex wanjala" data-subtext="ID:1234587">Andrew Mwangi</option>    
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
-                                                    <label>Year <strong class="text-danger">*</strong></label>
-                                                    <select class="selectpicker form-control show-tick" title="Vehicle's make year" placeholder="Vehicle's make year" data-live-search="true">
-                                                    <option value="2020">2020</option>
-                                                    <option value="2019">2019</option>
+                                                    <label>Select Driver<strong class="text-danger">*</strong></label>
+                                                    <select class="selectpicker form-control show-tick select-driver-option" data-size="5" title="Select the driver" placeholder="Vehicle type" data-live-search="true">
+                                                        <option value="Add new driver" data-content="<span class='badge add-driver badge-success btn btn-sm btn-info'><i class='zmdi zmdi-plus'></i>Add a driver</span>"></option>
+                                                        <option value="Kelvin Njuguna" data-subtext="ID:31839322">Kelvin Njuguna</option>
+                                                        <option value="alex wanjala" data-subtext="ID:1234587">Alex wanjala</option>
+                                                       
                                                 </select>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label>Chasis No.<strong class="text-danger">*</strong></label>
-                                                    <input type="text" class="form-control validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="2" placeholder="Enter vehicle's chasis number">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label>Color<strong class="text-danger">*</strong></label>
-                                                    <input type="text" class="form-control validate" pattern="^[a-zA-Z']{2,30}$" minlength="2" placeholder="Enter vehicle's color" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label>Passangers <strong class="text-danger">*</strong></label>
-                                                    <select class="selectpicker form-control show-tick" title="Vehicle's passengers" placeholder="passangers" data-live-search="true">
-                                                    <option value="3">3</option>
-                                                    <option value="5">5</option>
-                                                    <option value="7">7</option>
-                                                </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-12 adult-form">
-                                                <div class="form-group">
-                                                    <label>Body Type<strong class="text-danger">*</strong></label>
-                                                    <select class="selectpicker form-control show-tick" title="Select body type" placeholder="Body Type" data-live-search="true">
-                                                    <option value="microcar">Microcar</option>
-                                                    <option value="salon">Salon</option>
-                                                    <option value="s-wagon">S-Wagon</option>
-                                                    <option value="minisuv">Mini-Suv</option>
-                                                    <option value="pickup">Pick-Up</option>
-
-                                                </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="checkbox col-md-4 col-sm-12 my-auto">
-                                                <input type="checkbox" id="car_seat_check">
-                                                <label class="checkbox__label" for="car_seat_check">Child's car seat</label>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label>Owner <strong class="text-danger">*</strong></label>
-                                                    <select class="selectpicker form-control show-tick" title="Owner of vehicle" data-live-search="true">
-                                                    <option value="1">Eric Wamagari</option>
-                                                    <option value="2">Jeremy Tobikes</option>
-                                                </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <label>Vehicle's Description <strong class="text-danger">*</strong></label>
-                                                    <textarea type="text" class="form-control validate" rows="4" cols="50" placeholder="Enter vehicle's descipion" required></textarea>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 mb-4">
-                                                <hr>
-                                                <h4 class="card-title">Attachments</h4>
-                                                <h6 class="card-subtitle">Attach images of the vehicle here.</h6>
-                                            </div>
-
-                                            <label class="col-sm-12 col-md-3 form-attach" for="nat-id">
-                                            <div class="id-container img-container">
-                                                <span><img src="images/sedan.jpg"></span>
-                                                <h5>Car Image</h5>
-                                                <p>Only <strong>.JPG, .JPEG, .PNG files</strong> are accepted</p>
-                                                <small class="text-danger"><strong>No file selected</strong></small>
-                                                <!-- national id input box -->
-                                                <input type="file" accept="application/pdf"  id="nat-id" required class="form-control nat-id d-none">
-                                            </div>
-                                        </label>
                                         </div>
+
+                                        <!-- adding owner -->
+
+                                        <div class="row owner-section d-none">
+                                            <div class="col-12 border p-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h3>Owner details</h3>
+                                                        <p><strong>Remember to enter the details about the owner bellow</strong></p>
+                                                    </div>
+                                                    <div class="col-12 pb-5">
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>ID Number/Passport Number <strong
+                                                                    class="text-danger">*</strong></label>
+                                                                    <input type="text" name="NationalId" class="form-control validate" placeholder="Enter ID Number">
+                                                                    <input type="hidden" name="OwnerType" value="0">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>First name <strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="FirstName" class="form-control validate" placeholder="Enter first name">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Other Name(s)</label>
+                                                                    <input type="text" name="OtherNames" class="form-control validate" placeholder="Enter other name(s)">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Owner's Gender</label>
+                                                                    <br>
+                                                                    <div class="checkbox checkbox--inline">
+                                                                        <input type="radio" name="ownergender" id="maleowner">
+                                                                        <label class="radio__label" for="maledriver">Male</label>
+                                                                    </div>
+
+                                                                    <div class="checkbox checkbox--inline">
+                                                                        <input type="radio" name="ownergender" id="femaleowner">
+                                                                        <label class="radio__label" for="femaledriver">Female</label>
+                                                                    </div>
+
+                                                                    <div class="checkbox checkbox--inline">
+                                                                        <input type="radio" name="ownergender" id="notSayowner">
+                                                                        <label class="radio__label" for="notSaydriver">Prefer not to say</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Location<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="City" class="form-control city-form" placeholder="Enter the city name">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Select contract date <strong
+                                                                    class="text-danger">*</strong></label>
+                                                                    <input type="text" class="form-control date-picker dob1" required placeholder="Pick the date when the owner joined SwedKen" name="ContractDate" value="{{ old('ContractDate">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Country<strong class="text-danger">*</strong></label>
+                                                                    <select name="Country" id="" title="please select your postal country" class="form-control country-form" placeholder="Country">
+                                                                <option value="0">-- Select country --</option>
+                                                                <option value="AF">Afghanistan</option>
+                                                                <option value="AL">Albania</option>
+                                                                <option value="DZ">Algeria</option>
+                                                                <option value="AS">American Samoa</option>
+                                                                <option value="AD">Andorra</option>
+                                                                <option value="AO">Angola</option>
+                                                                <option value="AI">Anguilla</option>
+                                                                <option value="AQ">Antarctica</option>
+                                                                <option value="AG">Antigua And Barbuda</option>
+                                                                <option value="AR">Argentina</option>
+                                                                <option value="AM">Armenia</option>
+                                                                <option value="AW">Aruba</option>
+                                                                <option value="AU">Australia</option>
+                                                                <option value="AT">Austria</option>
+                                                                <option value="AZ">Azerbaijan</option>
+                                                                <option value="BS">Bahamas</option>
+                                                                <option value="BH">Bahrain</option>
+                                                                <option value="BD">Bangladesh</option>
+                                                                <option value="BB">Barbados</option>
+                                                                <option value="BY">Belarus</option>
+                                                                <option value="BE">Belgium</option>
+                                                                <option value="BZ">Belize</option>
+                                                                <option value="BJ">Benin</option>
+                                                                <option value="BM">Bermuda</option>
+                                                                <option value="BT">Bhutan</option>
+        
+                                                                <option value="BO">Bolivia</option>
+                                                                <option value="BA">Bosnia And Herzegowina</option>
+                                                                <option value="BW">Botswana</option>
+                                                                <option value="BV">Bouvet Island</option>
+                                                                <option value="BR">Brazil</option>
+                                                                <option value="IO">British Indian Ocean Territory</option>
+                                                                <option value="BN">Brunei Darussalam</option>
+                                                                <option value="BG">Bulgaria</option>
+                                                                <option value="BF">Burkina Faso</option>
+                                                                <option value="BI">Burundi</option>
+                                                                <option value="KH">Cambodia</option>
+                                                                <option value="CM">Cameroon</option>
+                                                                <option value="CA">Canada</option>
+                                                                <option value="CV">Cape Verde</option>
+                                                                <option value="KY">Cayman Islands</option>
+                                                                <option value="CF">Central African Republic</option>
+                                                                <option value="TD">Chad</option>
+                                                                <option value="CL">Chile</option>
+                                                                <option value="CN">China</option>
+                                                                <option value="CX">Christmas Island</option>
+                                                                <option value="CC">Cocos (Keeling) Islands</option>
+                                                                <option value="CO">Colombia</option>
+                                                                <option value="KM">Comoros</option>
+                                                                <option value="CG">Congo</option>
+                                                                <option value="CK">Cook Islands</option>
+                                                                <option value="CR">Costa Rica</option>
+                                                                <option value="CI">Cote D'Ivoire</option>
+                                                                <option value="HR">Croatia (Local Name: Hrvatska)</option>
+                                                                <option value="CU">Cuba</option>
+                                                                <option value="CY">Cyprus</option>
+                                                                <option value="CZ">Czech Republic</option>
+                                                                <option value="DK">Denmark</option>
+                                                                <option value="DJ">Djibouti</option>
+                                                                <option value="DM">Dominica</option>
+                                                                <option value="DO">Dominican Republic</option>
+                                                                <option value="TP">East Timor</option>
+                                                                <option value="EC">Ecuador</option>
+                                                                <option value="EG">Egypt</option>
+                                                                <option value="SV">El Salvador</option>
+                                                                <option value="GQ">Equatorial Guinea</option>
+                                                                <option value="ER">Eritrea</option>
+                                                                <option value="EE">Estonia</option>
+                                                                <option value="ET">Ethiopia</option>
+                                                                <option value="FK">Falkland Islands (Malvinas)</option>
+                                                                <option value="FO">Faroe Islands</option>
+                                                                <option value="FJ">Fiji</option>
+                                                                <option value="FI">Finland</option>
+                                                                <option value="FR">France</option>
+                                                                <option value="GF">French Guiana</option>
+                                                                <option value="PF">French Polynesia</option>
+                                                                <option value="TF">French Southern Territories</option>
+                                                                <option value="GA">Gabon</option>
+                                                                <option value="GM">Gambia</option>
+                                                                <option value="GE">Georgia</option>
+                                                                <option value="DE">Germany</option>
+                                                                <option value="GH">Ghana</option>
+                                                                <option value="GI">Gibraltar</option>
+                                                                <option value="GR">Greece</option>
+                                                                <option value="GL">Greenland</option>
+                                                                <option value="GD">Grenada</option>
+                                                                <option value="GP">Guadeloupe</option>
+                                                                <option value="GU">Guam</option>
+                                                                <option value="GT">Guatemala</option>
+                                                                <option value="GN">Guinea</option>
+                                                                <option value="GW">Guinea-Bissau</option>
+                                                                <option value="GY">Guyana</option>
+                                                                <option value="HT">Haiti</option>
+                                                                <option value="HM">Heard And Mc Donald Islands</option>
+                                                                <option value="VA">Holy See (Vatican City State)</option>
+                                                                <option value="HN">Honduras</option>
+                                                                <option value="HK">Hong Kong</option>
+                                                                <option value="HU">Hungary</option>
+                                                                <option value="IS">Icel And</option>
+                                                                <option value="IN">India</option>
+                                                                <option value="ID">Indonesia</option>
+                                                                <option value="IR">Iran (Islamic Republic Of)</option>
+                                                                <option value="IQ">Iraq</option>
+                                                                <option value="IE">Ireland</option>
+                                                                <option value="IL">Israel</option>
+                                                                <option value="IT">Italy</option>
+                                                                <option value="JM">Jamaica</option>
+                                                                <option value="JP">Japan</option>
+                                                                <option value="JO">Jordan</option>
+                                                                <option value="KZ">Kazakhstan</option>
+                                                                <option selected="selected" value="KE">Kenya</option>
+                                                                <option value="KI">Kiribati</option>
+                                                                <option value="KP">Korea, Dem People'S Republic</option>
+                                                                <option value="KR">Korea, Republic Of</option>
+                                                                <option value="KW">Kuwait</option>
+                                                                <option value="KG">Kyrgyzstan</option>
+                                                                <option value="LA">Lao People'S Dem Republic</option>
+                                                                <option value="LV">Latvia</option>
+                                                                <option value="LB">Lebanon</option>
+                                                                <option value="LS">Lesotho</option>
+                                                                <option value="LR">Liberia</option>
+                                                                <option value="LY">Libyan Arab Jamahiriya</option>
+                                                                <option value="LI">Liechtenstein</option>
+                                                                <option value="LT">Lithuania</option>
+                                                                <option value="LU">Luxembourg</option>
+                                                                <option value="MO">Macau</option>
+                                                                <option value="MK">Macedonia</option>
+                                                                <option value="MG">Madagascar</option>
+                                                                <option value="MW">Malawi</option>
+                                                                <option value="MY">Malaysia</option>
+                                                                <option value="MV">Maldives</option>
+                                                                <option value="ML">Mali</option>
+                                                                <option value="MT">Malta</option>
+                                                                <option value="MH">Marshall Islands</option>
+                                                                <option value="MQ">Martinique</option>
+                                                                <option value="MR">Mauritania</option>
+                                                                <option value="MU">Mauritius</option>
+                                                                <option value="YT">Mayotte</option>
+                                                                <option value="MX">Mexico</option>
+                                                                <option value="FM">Micronesia, Federated States</option>
+                                                                <option value="MD">Moldova, Republic Of</option>
+                                                                <option value="MC">Monaco</option>
+                                                                <option value="MN">Mongolia</option>
+                                                                <option value="MS">Montserrat</option>
+                                                                <option value="MA">Morocco</option>
+                                                                <option value="MZ">Mozambique</option>
+                                                                <option value="MM">Myanmar</option>
+                                                                <option value="NA">Namibia</option>
+                                                                <option value="NR">Nauru</option>
+                                                                <option value="NP">Nepal</option>
+                                                                <option value="NL">Netherlands</option>
+                                                                <option value="AN">Netherlands Ant Illes</option>
+                                                                <option value="NC">New Caledonia</option>
+                                                                <option value="NZ">New Zealand</option>
+                                                                <option value="NI">Nicaragua</option>
+                                                                <option value="NE">Niger</option>
+                                                                <option value="NG">Nigeria</option>
+                                                                <option value="NU">Niue</option>
+                                                                <option value="NF">Norfolk Island</option>
+                                                                <option value="MP">Northern Mariana Islands</option>
+                                                                <option value="NO">Norway</option>
+                                                                <option value="OM">Oman</option>
+                                                                <option value="PK">Pakistan</option>
+                                                                <option value="PW">Palau</option>
+                                                                <option value="PA">Panama</option>
+                                                                <option value="PG">Papua New Guinea</option>
+                                                                <option value="PY">Paraguay</option>
+                                                                <option value="PE">Peru</option>
+                                                                <option value="PH">Philippines</option>
+                                                                <option value="PN">Pitcairn</option>
+                                                                <option value="PL">Poland</option>
+                                                                <option value="PT">Portugal</option>
+                                                                <option value="PR">Puerto Rico</option>
+                                                                <option value="QA">Qatar</option>
+                                                                <option value="RE">Reunion</option>
+                                                                <option value="RO">Romania</option>
+                                                                <option value="RU">Russian Federation</option>
+                                                                <option value="RW">Rwanda</option>
+                                                                <option value="KN">Saint K Itts And Nevis</option>
+                                                                <option value="LC">Saint Lucia</option>
+                                                                <option value="VC">Saint Vincent, The Grenadines</option>
+                                                                <option value="WS">Samoa</option>
+                                                                <option value="SM">San Marino</option>
+                                                                <option value="ST">Sao Tome And Principe</option>
+                                                                <option value="SA">Saudi Arabia</option>
+                                                                <option value="SN">Senegal</option>
+                                                                <option value="SC">Seychelles</option>
+                                                                <option value="SL">Sierra Leone</option>
+                                                                <option value="SG">Singapore</option>
+                                                                <option value="SK">Slovakia (Slovak Republic)</option>
+                                                                <option value="SI">Slovenia</option>
+                                                                <option value="SB">Solomon Islands</option>
+                                                                <option value="SO">Somalia</option>
+                                                                <option value="ZA">South Africa</option>
+                                                                <option value="GS">South Georgia , S Sandwich Is.</option>
+                                                                <option value="ES">Spain</option>
+                                                                <option value="LK">Sri Lanka</option>
+                                                                <option value="SH">St. Helena</option>
+                                                                <option value="PM">St. Pierre And Miquelon</option>
+                                                                <option value="SD">Sudan</option>
+                                                                <option value="SR">Suriname</option>
+                                                                <option value="SJ">Svalbard, Jan Mayen Islands</option>
+                                                                <option value="SZ">Sw Aziland</option>
+                                                                <option value="SE">Sweden</option>
+                                                                <option value="CH">Switzerland</option>
+                                                                <option value="SY">Syrian Arab Republic</option>
+                                                                <option value="TW">Taiwan</option>
+                                                                <option value="TJ">Tajikistan</option>
+                                                                <option value="TZ">Tanzania, United Republic Of</option>
+                                                                <option value="TH">Thailand</option>
+                                                                <option value="TG">Togo</option>
+                                                                <option value="TK">Tokelau</option>
+                                                                <option value="TO">Tonga</option>
+                                                                <option value="TT">Trinidad And Tobago</option>
+                                                                <option value="TN">Tunisia</option>
+                                                                <option value="TR">Turkey</option>
+                                                                <option value="TM">Turkmenistan</option>
+                                                                <option value="TC">Turks And Caicos Islands</option>
+                                                                <option value="TV">Tuvalu</option>
+                                                                <option value="UG">Uganda</option>
+                                                                <option value="UA">Ukraine</option>
+                                                                <option value="AE">United Arab Emirates</option>
+                                                                <option value="GB">United Kingdom</option>
+                                                                <option value="US">United States</option>
+                                                                <option value="UM">United States Minor Is.</option>
+                                                                <option value="UY">Uruguay</option>
+                                                                <option value="UZ">Uzbekistan</option>
+                                                                <option value="VU">Vanuatu</option>
+                                                                <option value="VE">Venezuela</option>
+                                                                <option value="VN">Viet Nam</option>
+                                                                <option value="VG">Virgin Islands (British)</option>
+                                                                <option value="VI">Virgin Islands (U.S.)</option>
+                                                                <option value="WF">Wallis And Futuna Islands</option>
+                                                                <option value="EH">Western Sahara</option>
+                                                                <option value="YE">Yemen</option>
+                                                                <option value="YU">Yugoslavia</option>
+                                                                <option value="ZR">Zaire</option>
+                                                                <option value="ZM">Zambia</option>
+                                                                <option value="ZW">Zimbabwe</option>
+        
+                                                            </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Phone Number<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="PhoneNumber" class="form-control phone-num validate" placeholder="Enter phone number">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Email address<strong class="text-danger">*</strong></label>
+                                                                    <input type="email" name="Email" class="form-control email-input validate" id="id1" placeholder="email@email.com">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12 mb-4">
+                                                                <hr>
+                                                                <h4 class="card-title">Bank details</h4>
+                                                                <h6 class="card-subtitle">Fill in the owner's bank details here.</h6>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Bank account name<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="BankAccountName" class="form-control email-input validate" id="id1" placeholder="Enter the bank account name">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Bank account number<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="BankAccountNumber" class="form-control email-input validate" id="id1" placeholder="Enter the bank account number">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Bank branch<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="BankBranch" class="form-control email-input validate" id="id1" placeholder="Enter the bank branch">
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-12 mb-4">
+                                                                <hr>
+                                                                <h4 class="card-title">Attachments</h4>
+                                                                <h6 class="card-subtitle">Attach official documents for the applicant here.
+                                                                </h6>
+                                                            </div>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach" for="nat-id">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/id-card.svg"></span>
+                                                                    <h5>Nat ID card or Passport</h5>
+                                                                    <p>Only <strong>.PDF files</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input name="IdFile"  type="file"
+                                                                        accept="application/pdf" id="nat-id"
+                                                                        class="form-control nat-id d-none">
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach" for="log-book">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/document.svg"></span>
+                                                                    <h5>Log book</h5>
+                                                                    <p>Only <strong>.PDF files</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input name="LogBook" type="file"
+                                                                        accept="application/pdf" id="log-book"
+                                                                        class="form-control nat-id d-none">
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach" for="contract">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/contract.svg"></span>
+                                                                    <h5>Signed contract</h5>
+                                                                    <p>Only <strong>.PDF files</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input name="Contract" type="file"
+                                                                        accept="application/pdf" id="contract"
+                                                                        class="form-control nat-id d-none">
+                                                                </div>
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- adding driver -->
+                                        <div class="row driver-section d-none mt-4">
+                                            <div class="col-12 border p-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h3>Driver details</h3>
+                                                        <p><strong>Enter the driver's details bellow</strong></p>
+                                                    </div>
+                                                    <div class="col-12 pb-5">
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>ID Number/Passport Number <strong
+                                                                    class="text-danger">*</strong></label>
+                                                                    <input type="text" name="NationalId" class="form-control validate" placeholder="Enter ID Number">
+                                                                    <input type="hidden" name="OwnerType" value="0">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>First name <strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="FirstName" class="form-control validate" placeholder="Enter first name">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Other Name(s)</label>
+                                                                    <input type="text" name="OtherNames" class="form-control validate" placeholder="Enter other name(s)">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Nationality<strong class="text-danger">*</strong></label>
+                                                                    <select name="Country" id="" title="please select your postal country" class="form-control country-form selectpicker" placeholder="Country">
+                                                                        <option value="0">-- Select country --</option>
+                                                                        <option value="AF">Afghanistan</option>
+                                                                        <option value="AL">Albania</option>
+                                                                        <option value="DZ">Algeria</option>
+                                                                        <option value="AS">American Samoa</option>
+                                                                        <option value="AD">Andorra</option>
+                                                                        <option value="AO">Angola</option>
+                                                                        <option value="AI">Anguilla</option>
+                                                                        <option value="AQ">Antarctica</option>
+                                                                        <option value="AG">Antigua And Barbuda</option>
+                                                                        <option value="AR">Argentina</option>
+                                                                        <option value="AM">Armenia</option>
+                                                                        <option value="AW">Aruba</option>
+                                                                        <option value="AU">Australia</option>
+                                                                        <option value="AT">Austria</option>
+                                                                        <option value="AZ">Azerbaijan</option>
+                                                                        <option value="BS">Bahamas</option>
+                                                                        <option value="BH">Bahrain</option>
+                                                                        <option value="BD">Bangladesh</option>
+                                                                        <option value="BB">Barbados</option>
+                                                                        <option value="BY">Belarus</option>
+                                                                        <option value="BE">Belgium</option>
+                                                                        <option value="BZ">Belize</option>
+                                                                        <option value="BJ">Benin</option>
+                                                                        <option value="BM">Bermuda</option>
+                                                                        <option value="BT">Bhutan</option>
+                
+                                                                        <option value="BO">Bolivia</option>
+                                                                        <option value="BA">Bosnia And Herzegowina</option>
+                                                                        <option value="BW">Botswana</option>
+                                                                        <option value="BV">Bouvet Island</option>
+                                                                        <option value="BR">Brazil</option>
+                                                                        <option value="IO">British Indian Ocean Territory</option>
+                                                                        <option value="BN">Brunei Darussalam</option>
+                                                                        <option value="BG">Bulgaria</option>
+                                                                        <option value="BF">Burkina Faso</option>
+                                                                        <option value="BI">Burundi</option>
+                                                                        <option value="KH">Cambodia</option>
+                                                                        <option value="CM">Cameroon</option>
+                                                                        <option value="CA">Canada</option>
+                                                                        <option value="CV">Cape Verde</option>
+                                                                        <option value="KY">Cayman Islands</option>
+                                                                        <option value="CF">Central African Republic</option>
+                                                                        <option value="TD">Chad</option>
+                                                                        <option value="CL">Chile</option>
+                                                                        <option value="CN">China</option>
+                                                                        <option value="CX">Christmas Island</option>
+                                                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                                                        <option value="CO">Colombia</option>
+                                                                        <option value="KM">Comoros</option>
+                                                                        <option value="CG">Congo</option>
+                                                                        <option value="CK">Cook Islands</option>
+                                                                        <option value="CR">Costa Rica</option>
+                                                                        <option value="CI">Cote D'Ivoire</option>
+                                                                        <option value="HR">Croatia (Local Name: Hrvatska)</option>
+                                                                        <option value="CU">Cuba</option>
+                                                                        <option value="CY">Cyprus</option>
+                                                                        <option value="CZ">Czech Republic</option>
+                                                                        <option value="DK">Denmark</option>
+                                                                        <option value="DJ">Djibouti</option>
+                                                                        <option value="DM">Dominica</option>
+                                                                        <option value="DO">Dominican Republic</option>
+                                                                        <option value="TP">East Timor</option>
+                                                                        <option value="EC">Ecuador</option>
+                                                                        <option value="EG">Egypt</option>
+                                                                        <option value="SV">El Salvador</option>
+                                                                        <option value="GQ">Equatorial Guinea</option>
+                                                                        <option value="ER">Eritrea</option>
+                                                                        <option value="EE">Estonia</option>
+                                                                        <option value="ET">Ethiopia</option>
+                                                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                                                        <option value="FO">Faroe Islands</option>
+                                                                        <option value="FJ">Fiji</option>
+                                                                        <option value="FI">Finland</option>
+                                                                        <option value="FR">France</option>
+                                                                        <option value="GF">French Guiana</option>
+                                                                        <option value="PF">French Polynesia</option>
+                                                                        <option value="TF">French Southern Territories</option>
+                                                                        <option value="GA">Gabon</option>
+                                                                        <option value="GM">Gambia</option>
+                                                                        <option value="GE">Georgia</option>
+                                                                        <option value="DE">Germany</option>
+                                                                        <option value="GH">Ghana</option>
+                                                                        <option value="GI">Gibraltar</option>
+                                                                        <option value="GR">Greece</option>
+                                                                        <option value="GL">Greenland</option>
+                                                                        <option value="GD">Grenada</option>
+                                                                        <option value="GP">Guadeloupe</option>
+                                                                        <option value="GU">Guam</option>
+                                                                        <option value="GT">Guatemala</option>
+                                                                        <option value="GN">Guinea</option>
+                                                                        <option value="GW">Guinea-Bissau</option>
+                                                                        <option value="GY">Guyana</option>
+                                                                        <option value="HT">Haiti</option>
+                                                                        <option value="HM">Heard And Mc Donald Islands</option>
+                                                                        <option value="VA">Holy See (Vatican City State)</option>
+                                                                        <option value="HN">Honduras</option>
+                                                                        <option value="HK">Hong Kong</option>
+                                                                        <option value="HU">Hungary</option>
+                                                                        <option value="IS">Icel And</option>
+                                                                        <option value="IN">India</option>
+                                                                        <option value="ID">Indonesia</option>
+                                                                        <option value="IR">Iran (Islamic Republic Of)</option>
+                                                                        <option value="IQ">Iraq</option>
+                                                                        <option value="IE">Ireland</option>
+                                                                        <option value="IL">Israel</option>
+                                                                        <option value="IT">Italy</option>
+                                                                        <option value="JM">Jamaica</option>
+                                                                        <option value="JP">Japan</option>
+                                                                        <option value="JO">Jordan</option>
+                                                                        <option value="KZ">Kazakhstan</option>
+                                                                        <option selected="selected" value="KE">Kenya</option>
+                                                                        <option value="KI">Kiribati</option>
+                                                                        <option value="KP">Korea, Dem People'S Republic</option>
+                                                                        <option value="KR">Korea, Republic Of</option>
+                                                                        <option value="KW">Kuwait</option>
+                                                                        <option value="KG">Kyrgyzstan</option>
+                                                                        <option value="LA">Lao People'S Dem Republic</option>
+                                                                        <option value="LV">Latvia</option>
+                                                                        <option value="LB">Lebanon</option>
+                                                                        <option value="LS">Lesotho</option>
+                                                                        <option value="LR">Liberia</option>
+                                                                        <option value="LY">Libyan Arab Jamahiriya</option>
+                                                                        <option value="LI">Liechtenstein</option>
+                                                                        <option value="LT">Lithuania</option>
+                                                                        <option value="LU">Luxembourg</option>
+                                                                        <option value="MO">Macau</option>
+                                                                        <option value="MK">Macedonia</option>
+                                                                        <option value="MG">Madagascar</option>
+                                                                        <option value="MW">Malawi</option>
+                                                                        <option value="MY">Malaysia</option>
+                                                                        <option value="MV">Maldives</option>
+                                                                        <option value="ML">Mali</option>
+                                                                        <option value="MT">Malta</option>
+                                                                        <option value="MH">Marshall Islands</option>
+                                                                        <option value="MQ">Martinique</option>
+                                                                        <option value="MR">Mauritania</option>
+                                                                        <option value="MU">Mauritius</option>
+                                                                        <option value="YT">Mayotte</option>
+                                                                        <option value="MX">Mexico</option>
+                                                                        <option value="FM">Micronesia, Federated States</option>
+                                                                        <option value="MD">Moldova, Republic Of</option>
+                                                                        <option value="MC">Monaco</option>
+                                                                        <option value="MN">Mongolia</option>
+                                                                        <option value="MS">Montserrat</option>
+                                                                        <option value="MA">Morocco</option>
+                                                                        <option value="MZ">Mozambique</option>
+                                                                        <option value="MM">Myanmar</option>
+                                                                        <option value="NA">Namibia</option>
+                                                                        <option value="NR">Nauru</option>
+                                                                        <option value="NP">Nepal</option>
+                                                                        <option value="NL">Netherlands</option>
+                                                                        <option value="AN">Netherlands Ant Illes</option>
+                                                                        <option value="NC">New Caledonia</option>
+                                                                        <option value="NZ">New Zealand</option>
+                                                                        <option value="NI">Nicaragua</option>
+                                                                        <option value="NE">Niger</option>
+                                                                        <option value="NG">Nigeria</option>
+                                                                        <option value="NU">Niue</option>
+                                                                        <option value="NF">Norfolk Island</option>
+                                                                        <option value="MP">Northern Mariana Islands</option>
+                                                                        <option value="NO">Norway</option>
+                                                                        <option value="OM">Oman</option>
+                                                                        <option value="PK">Pakistan</option>
+                                                                        <option value="PW">Palau</option>
+                                                                        <option value="PA">Panama</option>
+                                                                        <option value="PG">Papua New Guinea</option>
+                                                                        <option value="PY">Paraguay</option>
+                                                                        <option value="PE">Peru</option>
+                                                                        <option value="PH">Philippines</option>
+                                                                        <option value="PN">Pitcairn</option>
+                                                                        <option value="PL">Poland</option>
+                                                                        <option value="PT">Portugal</option>
+                                                                        <option value="PR">Puerto Rico</option>
+                                                                        <option value="QA">Qatar</option>
+                                                                        <option value="RE">Reunion</option>
+                                                                        <option value="RO">Romania</option>
+                                                                        <option value="RU">Russian Federation</option>
+                                                                        <option value="RW">Rwanda</option>
+                                                                        <option value="KN">Saint K Itts And Nevis</option>
+                                                                        <option value="LC">Saint Lucia</option>
+                                                                        <option value="VC">Saint Vincent, The Grenadines</option>
+                                                                        <option value="WS">Samoa</option>
+                                                                        <option value="SM">San Marino</option>
+                                                                        <option value="ST">Sao Tome And Principe</option>
+                                                                        <option value="SA">Saudi Arabia</option>
+                                                                        <option value="SN">Senegal</option>
+                                                                        <option value="SC">Seychelles</option>
+                                                                        <option value="SL">Sierra Leone</option>
+                                                                        <option value="SG">Singapore</option>
+                                                                        <option value="SK">Slovakia (Slovak Republic)</option>
+                                                                        <option value="SI">Slovenia</option>
+                                                                        <option value="SB">Solomon Islands</option>
+                                                                        <option value="SO">Somalia</option>
+                                                                        <option value="ZA">South Africa</option>
+                                                                        <option value="GS">South Georgia , S Sandwich Is.</option>
+                                                                        <option value="ES">Spain</option>
+                                                                        <option value="LK">Sri Lanka</option>
+                                                                        <option value="SH">St. Helena</option>
+                                                                        <option value="PM">St. Pierre And Miquelon</option>
+                                                                        <option value="SD">Sudan</option>
+                                                                        <option value="SR">Suriname</option>
+                                                                        <option value="SJ">Svalbard, Jan Mayen Islands</option>
+                                                                        <option value="SZ">Sw Aziland</option>
+                                                                        <option value="SE">Sweden</option>
+                                                                        <option value="CH">Switzerland</option>
+                                                                        <option value="SY">Syrian Arab Republic</option>
+                                                                        <option value="TW">Taiwan</option>
+                                                                        <option value="TJ">Tajikistan</option>
+                                                                        <option value="TZ">Tanzania, United Republic Of</option>
+                                                                        <option value="TH">Thailand</option>
+                                                                        <option value="TG">Togo</option>
+                                                                        <option value="TK">Tokelau</option>
+                                                                        <option value="TO">Tonga</option>
+                                                                        <option value="TT">Trinidad And Tobago</option>
+                                                                        <option value="TN">Tunisia</option>
+                                                                        <option value="TR">Turkey</option>
+                                                                        <option value="TM">Turkmenistan</option>
+                                                                        <option value="TC">Turks And Caicos Islands</option>
+                                                                        <option value="TV">Tuvalu</option>
+                                                                        <option value="UG">Uganda</option>
+                                                                        <option value="UA">Ukraine</option>
+                                                                        <option value="AE">United Arab Emirates</option>
+                                                                        <option value="GB">United Kingdom</option>
+                                                                        <option value="US">United States</option>
+                                                                        <option value="UM">United States Minor Is.</option>
+                                                                        <option value="UY">Uruguay</option>
+                                                                        <option value="UZ">Uzbekistan</option>
+                                                                        <option value="VU">Vanuatu</option>
+                                                                        <option value="VE">Venezuela</option>
+                                                                        <option value="VN">Viet Nam</option>
+                                                                        <option value="VG">Virgin Islands (British)</option>
+                                                                        <option value="VI">Virgin Islands (U.S.)</option>
+                                                                        <option value="WF">Wallis And Futuna Islands</option>
+                                                                        <option value="EH">Western Sahara</option>
+                                                                        <option value="YE">Yemen</option>
+                                                                        <option value="YU">Yugoslavia</option>
+                                                                        <option value="ZR">Zaire</option>
+                                                                        <option value="ZM">Zambia</option>
+                                                                        <option value="ZW">Zimbabwe</option>
+                
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Phone Number<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" name="PhoneNumber" class="form-control phone-num validate" placeholder="Enter phone number">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Email address<strong class="text-danger">*</strong></label>
+                                                                    <input type="email" name="Email" class="form-control email-input validate" id="id1" placeholder="email@email.com">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12 col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Driver's Gender</label>
+                                                                    <br>
+                                                                    <div class="checkbox checkbox--inline">
+                                                                        <input type="radio" name="drivergender" id="maledriver">
+                                                                        <label class="radio__label" for="maledriver">Male</label>
+                                                                    </div>
+
+                                                                    <div class="checkbox checkbox--inline">
+                                                                        <input type="radio" name="drivergender" id="femaledriver">
+                                                                        <label class="radio__label" for="femaledriver">Female</label>
+                                                                    </div>
+
+                                                                    <div class="checkbox checkbox--inline">
+                                                                        <input type="radio" name="drivergender" id="notSaydriver">
+                                                                        <label class="radio__label" for="notSaydriver">Prefer not to say</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                            <div class="col-12 mb-4">
+                                                                <hr>
+                                                                <h4 class="card-title">Attachments</h4>
+                                                                <h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
+                                                            </div>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach mt-2" for="nat-id">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/id-card.svg"></span>
+                                                                    <h5>Nat ID card or Passport</h5>
+                                                                    <p>Only <strong>.PDF files</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input type="file" name="Document" value="{{ old('Document"
+                                                                        accept="application/pdf" id="nat-id" required
+                                                                        class="form-control file-input-label d-none" required>
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach mt-2" for="drivers_license">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/driving-license.svg"></span>
+                                                                    <h5>Driver's License</h5>
+                                                                    <p>Only <strong>.PDF files</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input type="file" name="License" value="{{ old('License"
+                                                                        accept="application/pdf" id="drivers_license" required
+                                                                        class="form-control file-input-label d-none" required>
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach mt-2" for="photo">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/driver.svg"></span>
+                                                                    <h5>Driver's Image</h5>
+                                                                    <p>Only <strong>.JPG, JPEG or PNG</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input type="file" name="Photo" value="{{ old('Photo"
+                                                                        accept="application/jpg" id="photo"
+                                                                        class="form-control file-input-label d-none" required>
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach mt-2" for="goodconduct">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/positive-vote.svg"></span>
+                                                                    <h5>Good conduct</h5>
+                                                                    <p>Only <strong>.PDF, .DOCX</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input type="file" name="GoodConduct"
+                                                                        value="{{ old('GoodConduct" accept="application/jpg"
+                                                                        id="goodconduct" class="form-control nat-id d-none" required>
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach mt-2" for="cv">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/cv.svg"></span>
+                                                                    <h5>Driver's resume</h5>
+                                                                    <p>Only <strong>.PDF, DOCX</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input type="file" name="Cv" value="{{ old('Cv"
+                                                                        accept="application/jpg" id="cv" class="form-control nat-id d-none"
+                                                                        required>
+                                                                </div>
+                                                            </label>
+
+                                                            <label class="col-sm-12 col-md-3 form-attach mt-2" for="NtsaCard">
+                                                                <div class="id-container img-container">
+                                                                    <span><img src="images/permit.svg"></span>
+                                                                    <h5>NTSA card</h5>
+                                                                    <p>Only <strong>.PDF, DOCX</strong> are accepted</p>
+                                                                    <small class="text-danger"><strong>No file selected</strong></small>
+                                                                    <!-- national id input box -->
+                                                                    <input type="file" name="NtsaCard" value="{{ old('NtsaCard"
+                                                                        accept="application/jpg" id="NtsaCard"
+                                                                        class="form-control file-input-label d-none" required>
+                                                                </div>
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-footer w-100">

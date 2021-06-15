@@ -1462,6 +1462,35 @@ $('body').on('change', '.assignTripNow', function() {
     }
 });
 
+//adding owner
+var ownerSelector = $('.select-owner-option');
+var driverSelector = $('.select-driver-option');
+$('body').on('click', '.add-owner', function() {
+    // alert("clicked");
+    $('.owner-section').removeClass('d-none');
+});
+
+$('body').on('change', ownerSelector, function() {
+    if (ownerSelector.val() !== "Add new owner") {
+        // alert(ownerSelector);
+        $('.owner-section').addClass('d-none');
+    }
+});
+
+$('body').on('click', '.add-driver', function() {
+    $('.driver-section').removeClass('d-none');
+});
+
+$('body').on('change', driverSelector, function() {
+    if (driverSelector.val() !== "Add new driver") {
+        // alert(ownerSelector);
+        $('.driver-section').addClass('d-none');
+    }
+});
+
+
+
+
 
 
 $(document).ready(function() {
@@ -1482,7 +1511,9 @@ $(document).ready(function() {
     $('.calendarNav .nav-link').on('click', function() {
         $(this).addClass('active');
         $(this).parent().siblings().children().removeClass('active');
-    })
+    });
+
+
 
 
 
