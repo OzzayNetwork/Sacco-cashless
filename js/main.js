@@ -1520,9 +1520,13 @@ $('body').on('change', '#mobile-money', function() {
 
 $('body').on('change', '#cash-money', function() {
     if (!$('#cash-money').checked == true) {
-        alert("checked");
         $('.cash-money-mode').removeClass('d-none').siblings().addClass('d-none');
     }
+});
+
+$('body').on('click', '.btn-modal-cash-pay', function() {
+    $('.payment-received-cash').removeClass('d-none').siblings().addClass('d-none');
+    $(this).addClass('d-none');
 });
 
 //mpesa waiting for response

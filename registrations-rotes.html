@@ -310,6 +310,35 @@ f
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="addNewItem" tabindex="-1" role="dialog" data-backdrop='static' data-keyboard='false' aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add New Location</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row">
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="font-weight-bold">New Location's Name<strong class="text-danger">*</strong></label>
+                                    <input type="text" class="form-control" placeholder="Enter the location name">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close form</button>
+                        <button class="btn btn-info btn--icon-text new_customer"><i class="zmdi zmdi-plus" ></i>Add Location</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Modals -->
 
 
@@ -345,30 +374,32 @@ f
                                     <div class="col-12">
                                         <div class="form-group">
                                             <label><strong>From</strong></label>
-                                            <select class="form-control selectpicker searchPicker form-control show-tickr" data-live-search="true">
+                                            <select class="form-control selectpicker searchPicker form-control show-tickr" data-live-search="true" title="Select Origin name">
                                                 <option>Nakuru</option>
                                                 <option>Kissi</option>
                                                 <option>Nairobi</option>
                                                 <option>Nyeri</option>
                                             </select>
+                                            <small>Select the <strong>origin location</strong> from up above. If it doesn't exist you can add the location by clicking the <strong>Add location</strong> button.</small>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-group">
                                             <label><strong>Destination</strong></label>
-                                            <select class="form-control selectpicker" data-live-search="true">
+                                            <select class="form-control selectpicker searchPicker form-control show-tickr" data-live-search="true" title="Select Destination name">
                                                 <option>City hall</option>
                                                 <option>Kobil Thika</option>
                                                 <option>Pickup station</option>
                                                 
                                             </select>
+                                            <small>Select the <strong>destination location</strong> from up above. If it doesn't exist you can add the location by clicking the <strong>Add location</strong> button.</small>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label>Fare charges per sit</label>
-                                            <input type="text" class="form-control" placeholder="Enter charges">
+                                            <label><strong>Fare charges per sit</strong></label>
+                                            <input type="text" class="form-control" placeholder="Enter charges" title="Select ">
                                         </div>
                                     </div>
 
