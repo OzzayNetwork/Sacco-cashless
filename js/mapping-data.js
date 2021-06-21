@@ -217,17 +217,10 @@ function initMap() {
         map.setCenter(new google.maps.LatLng(Latitude, longitude));
 
         reverseGeocoding(Latitude, longitude);
-
         // alert(event.latLng);
-
         //get latitude
         // var theStreet=newCoords.results[0];
         // alert(theStreet);
-
-
-
-
-
         //opens the side bar form
         $('#newPoint').removeClass('left-100').siblings().addClass('left-100');
         $('.main-map-container .ma-backdrop').removeClass('d-none');
@@ -249,7 +242,7 @@ function initMap() {
     addMarker({
         coords: { lat: -1.29789, lng: 36.8486003 },
         iconImage: pickupPoint,
-        content: `<p class="d-none">agent|agent num</p>
+        content: `<p class="d-none">pickup|agent num</p>
         <h6 class="text-capitalize d-flex align-items-center">
         <span>Pickup point name <small><strong></strong></small></span></h6> 
         <p class="pb-0 mb-0">Address: <strong>Tom Mboya Street</strong></strong></p> 
@@ -262,12 +255,11 @@ function initMap() {
     addMarker({
         coords: { lat: -1.29989, lng: 36.8416003 },
         iconImage: stage,
-        content: `<p class="d-none">agent|agent num</p>
+        content: `<p class="d-none">stage|agent num</p>
         <h6 class="text-capitalize d-flex align-items-center mb-1 pb-0">
         <span class="">Matatu stage name<small><strong></strong></small></span></h6> 
         <p class="pb-1 mb-0">Address: <strong>Tea room, Nairobi CBD</strong></strong></p> 
-        <p class="text-info pb-0 mb-0"><strong>2 active agents</strong></p>
-        <p class="text-success"><strong>5 Checked in vehicles</strong></p>      
+        <p class="text-info"><strong>5 Checked in vehicles</strong></p>      
         </div>
         </div>`
     });
@@ -400,9 +392,16 @@ function initMap() {
                     $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
                 }
 
-                if (theGroup == "agent") {
+                if (theGroup == "stage") {
                     //function for agents
-                    $('#agents-info').removeClass('left-100').siblings().addClass('left-100');
+                    $('#stage-info').removeClass('left-100').siblings().addClass('left-100');
+                    $('.main-map-container .ma-backdrop').removeClass('d-none');
+                    $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
+                }
+
+                if (theGroup == "pickup") {
+                    //function for agents
+                    $('#pickup-info').removeClass('left-100').siblings().addClass('left-100');
                     $('.main-map-container .ma-backdrop').removeClass('d-none');
                     $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
                 }
@@ -663,9 +662,9 @@ function initMap() {
                     var thePlaceHolder = $('.listview .selected-point-details');
 
                     thePlaceHolder = `
-            <p class="mb-0"><strong>The Place Name</strong></p>
-            <p class="clicked-place">${thePlace}</p>
-            `;
+                    <p class="mb-0"><strong>The Place Name</strong></p>
+                    <p class="clicked-place">${thePlace}</p>
+                    `;
                     toggleBounce(marker);
                     TheplaceName = thePlace;
                     $('#newPoint .clicked-name').text(TheplaceName);

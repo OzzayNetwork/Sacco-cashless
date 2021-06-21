@@ -17890,7 +17890,7 @@ a.badge-white:focus {
 }
 .modal-body strong {
     font-weight: 800;
-    color: #4CAF50;
+    /* color: #4CAF50; */
 }
 .modal-body-header {
     display: flex;
@@ -20729,6 +20729,81 @@ ul.hero_list li:last-child {
 .selextor-cont-z-index {
     z-index: 10000;
     position: relative;
+}
+.form-control button .filter-option {
+    height: calc(1.5em + .75rem + -5px) !important;
+}
+
+/* car sits design */
+.the--car-selector {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid silver;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 7px;
+}
+.the--car-selector>div {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+}
+.the--car-selector .car-sits img {
+    height: 45px;
+    margin-right: 3rem;
+    transform: rotate(90deg);
+    margin-left: 1rem;
+}
+.the--car-selector .forbiden-sit {
+    cursor: not-allowed;
+    opacity: 40%;
+}
+.the--car-selector .car-sits .single-sit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.car-sits {
+    display: flex;
+}
+.car-sits .sits-column {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.taken-sit {
+    cursor: not-allowed;
+    opacity: 40%;
+}
+.available-sit {
+    cursor: pointer;
+}
+.available-sit:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.car-key img {
+    height: 1.5rem;
+}
+.car-key li {
+    display: flex;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 0.5rem;
+}
+.bg-bus-stop {
+    background: url("../images/Car-booking/busstop.svg");
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bus-container-man .card {
+    width: 100%;
+    height: calc(100% - 31px);
 }
 @media (max-width: 576px) {
     .dont-display-small {

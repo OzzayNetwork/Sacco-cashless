@@ -1488,6 +1488,113 @@ $('body').on('change', driverSelector, function() {
     }
 });
 
+$('body').on('click', '.available-sit', function() {
+    var availableURL = 'images/Car-booking/available.svg';
+    var selectedURL = 'images/Car-booking/selected.svg';
+
+    var theClassStatus = $(this).hasClass('text-warning');
+    if (theClassStatus == true) {
+        $(this).children('img').attr('src', availableURL);
+    } else {
+        $(this).children('img').attr('src', selectedURL);
+    }
+
+    $(this).toggleClass('text-warning').toggleClass('selected');
+    var selectedSits = $('.car-sits .selected').length;
+    $('.car-passengers').text(selectedSits);
+    var unitPrice = $('.car-price').text();
+    unitPrice = unitPrice.split("S ")[1];
+    unitPrice = parseFloat(unitPrice);
+    var totalPrice = unitPrice * parseFloat(selectedSits);
+    $('.car-total').text('KES ' + totalPrice);
+});
+
+// customCheck3.checked == true
+$('body').on('change', '#mobile-money', function() {
+    if (!$('#mobile-money').checked === true) {
+        $('.mpesa-payment-mode').removeClass('d-none').siblings().addClass('d-none');
+    } else {
+        alert("not checked");
+    }
+});
+
+$('body').on('change', '#cash-money', function() {
+    if (!$('#cash-money').checked == true) {
+        alert("checked");
+        $('.cash-money-mode').removeClass('d-none').siblings().addClass('d-none');
+    }
+});
+
+//mpesa waiting for response
+$('body').on('click', '.btn-modal-pay', function() {
+    closeOnEscape: false;
+    $('#payment-modal .modal-header button').addClass('d-none');
+    setTimeout(function() {
+
+    }, 5000);
+
+    $('.timer-loader').removeClass('d-none').siblings().addClass('d-none');
+    var timeleft = 30;
+    var downloadTimer = setInterval(function() {
+        if (timeleft <= 0) {
+            clearInterval(downloadTimer);
+            // alert("zero reached");
+            $(".timer-loader strong").text("30 s")
+            $(".timer-loader").addClass('d-none').siblings().removeClass('d-none');
+            $(".timer-loader").addClass('d-none').siblings().children();
+            $(".timer-loader strong").siblings().children().html('<i class="mdi mdi-refresh mr-2"></i> Retry');;
+        }
+        if (timeleft == 0) {
+
+            // if it timesout or payment is not received show this
+            $('.retry-payment').removeClass('d-none').siblings().addClass('d-none');
+            $('.close-mpesa-transation').removeClass('d-none').addClass('d-flex');
+            $('.payment-retry').removeClass('d-none').siblings().addClass('d-none');
+
+
+        }
+
+        if (timeleft == 15) {
+
+            //if it is succesfull
+            $('.payment-received').removeClass('d-none').siblings().addClass('d-none')
+            $('.retry-payment').addClass('d-none').siblings().addClass('d-none');
+            timeleft -= 1;
+        }
+
+        $(".timer-loader strong").text(timeleft + " S");
+        timeleft -= 1;
+    }, 1000);
+});
+
+//a select that you can add items with
+
+function addNewClone() {
+
+    //the button for adding a button for adding a new item
+    var theAddButton = '<a href="#"  class="btn btn-info btn--icon-text btn-add-new btn-sm ml-3" data-toggle="modal" data-target="#addNewItem"><i class="zmdi zmdi-plus" ></i>Add location</a>'
+        // var btnToclone=$('.btn-add-new');
+        // btnToclone.clone().appendTo(".no-results");
+
+    $(".no-results").append(theAddButton);
+    // theAddButton.appendTo(".no-results");
+    $('.no-results').addClass('theNewOneIsHere');
+
+}
+
+
+
+$('body').on('keyup', '.searchPicker .bs-searchbox input', function() {
+    var theParent = $(this).parent().siblings().children().children();
+    if (theParent.hasClass('theNewOneIsHere')) {
+        // 
+    } else {
+        addNewClone();
+
+    }
+});
+//a select that you can add items with
+
 
 
 

@@ -7,11 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>SwedKen | Dashboard</title>
-    <link rel="icon" href="demo/img/logo-files/nouv_logo.png" type="image/x-icon">
-
-
-    <!-- icon files -->
+    <title>Fleetfix | Cashless</title>
+    <link rel="icon" href="demo/img/logo-files/nouv_logo.png" type="image/x-icon" <!-- icon files -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
     <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
@@ -52,7 +49,7 @@
         </div>
 
         <header class="header">
-            <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+            <div class="navigation-trigger" data-ma-action="aside-open" data-ma-target=".sidebar">
                 <div class="navigation-trigger__inner">
                     <i class="navigation-trigger__line"></i>
                     <i class="navigation-trigger__line"></i>
@@ -123,9 +120,6 @@
         </header>
 
         <aside class="sidebar px-0 pt-0">
-            <div class="header__logo sidebar_logo">
-                <img src="demo/img/logo-files/swdkenlogo.png" class="img-fluid">
-            </div>
             <div class="scrollbar-inner">
                 <div class="user">
                     <div class="user__info" data-toggle="dropdown">
@@ -144,7 +138,7 @@
                 </div>
 
                 <ul class="navigation">
-                    <li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart"></i>overview</a></li>
+                    <li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart"></i>Dashboard</a></li>
                     <li class="navigation__active"><a href="map-view.html"><i class="mdi mdi-google-maps"></i>Map View</a></li>
 
                     <li class="navigation__sub">
@@ -153,23 +147,13 @@
                             <li><a href="owner-registration.html"><i class="mdi mdi-car-3-plus mx-2"></i>Owner</a></li>
                             <li><a href="vehicle-registration.html"><i class="flaticon-car-1 mx-2"></i>Vehicle</a></li>
                             <li><a href="driver-registration.html"><i class="mdi mdi-car-key mx-2"></i>Driver</a></li>
-                            <li><a href="registrations-rotes.html"><i class="mdi mdi-account-multiple-plus-outline mx-2"></i>Routes</a></li>
+                            <li><a href="client-registration.html"><i class="mdi mdi-account-multiple-plus-outline mx-2"></i>Client</a></li>
 
 
                         </ul>
                     </li>
 
-                    <li class="navigation__sub">
-                        <a href="#"><i class="mdi mdi-car-settings"></i>Bookings<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul class="">
-                            <li><a href="pickup-schedule.html"><i class="mdi mdi-car-3-plus mx-2"></i>Schedule a pickup</a></li>
-                            <li><a href="#"><i class="mdi mdi-car-3-plus mx-2"></i>Instant Booking</a></li>
-                            <li><a href="#"><i class="flaticon-car-1 mx-2"></i>Pending pickups</a></li>
-                            <li><a href="#"><i class="mdi mdi-car-key mx-2"></i>Assigned pickups</a></li>
-                            <li><a href="#"><i class="mdi mdi-car-key mx-2"></i>Fulfilled pickups</a></li>
-                            <li><a href="#"><i class="mdi mdi-car-key mx-2"></i>All pickups</a></li>
-                        </ul>
-                    </li>
+
                     <li class="navigation__sub">
                         <a href="#"><i class="mdi mdi-folder-edit-outline"></i>Packages <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                         <ul class="">
@@ -289,9 +273,6 @@
                                 </ul>
                             </li>
 
-                            <li class=""><a href="#">Vehicle body types</a></li>
-                            <li class=""><a href="#">Stops</a></li>
-                            <li class=""><a href="#">Stage</a></li>
                         </ul>
                     </li>
 
@@ -301,334 +282,339 @@
             </div>
         </aside>
 
+        <!-- payment modal -->
+        <div class="modal fade" id="payment-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="badge badge-pill badge-success text-uppercase">3 Passenger sits</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="payment-instructions col-12 animated fade-in">
+                                <h4 class="modal-title text-capitalize" id="exampleModalLongTitle">
+                                    MPESA payment request
+                                </h4>
+                                <br>
+                                <p><strong>3 Passenger</strong> Fare tickets for <strong>Kelvin Njuguna</strong></p>
+                                <br>
+
+                                <p class="mb-3">A payment request of <strong>KES 235</strong> will be sent to phone number
+                                    <strong>(0704549859)</strong> soon after you <strong>click</strong> the pay button below.
+                                </p>
+
+                                <p>
+                                    Once the payment request is sent to the customer's phone, the client will have <strong>30 seconds</strong> to complete the payment by entering their <strong>MPESA pin</strong> on their phone.
+                                </p>
+                                <p><strong>Click Send Request</strong> below when ready to continue.</p>
+
+                                <br>
+                            </div>
+
+                            <div class="payment-retry col-12 text-center d-none animated fade-in">
+
+                                <div class="mb-3">
+                                    <img class="img" src="images/modal-assets/payment-error.svg">
+                                </div>
+
+                                <h4 class="modal-title text-capitalize" id="exampleModalLongTitle">
+                                    MPESA payment request
+                                </h4>
+                                <br>
+                                <p>The payment was not received, it may because the customer took to long before entering their MPESA Pin. Press retry bellow or instruct the customer to pay directly through mpesa by using the <strong>paybill number 1234</strong>                                    and the account the <strong>account name is 76768DHJJH</strong> </p>
+                            </div>
+
+                            <div class="payment-received col-12 text-center d-non animated fade-in d-none">
+
+                                <div class="mb-3">
+                                    <img class="img" src="images/modal-assets/payment-received.svg">
+                                </div>
+
+                                <h4 class="modal-title text-capitalize" id="exampleModalLongTitle">
+                                    Payment Received
+                                </h4>
+                                <br>
+                                <p><strong>KES 230.20 Received</strong> as Payment for <strong>3 Passenger sits.</strong> The receipt number is </strong>
+                                </p>
+
+                                <button class="btn btn-block btn--icon-text btn-success text-capitalize btn-block"><i class="zmdi zmdi-print"></i> Print Receipt</button>
+                                <br>
+                                <button class="btn btn-outline btn--icon-text btn-outline-dark btn-block" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close"></i>Close</button>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn  text-capitalize btn-modal-pay btn-block btn-primary btn--icon-text">
+                            <span class=" animated fade-In"><i class="mdi mdi-login mr-2"></i> Send payment Request</span>
+                            <!-- loader -->
+                            <div class="timer-loader d-none animated fade-In">
+                                <i class="mdi mdi-timer-outline mr-2"></i><strong>30 S</strong>
+                            </div>
+                            <!-- loader -->
+
+                            <!-- retry payment -->
+                            <div class="retry-payment d-none animated fade-In">
+                                <i class="mdi mdi-refresh mr-2"></i><strong>Retry</strong>
+                            </div>
+                             <!-- retry payment -->
+                        </button>
+                        <button class="btn btn-outline btn--icon-text btn-outline-dark d-none close-mpesa-transation" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close"></i>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <section class="content">
-            <div class="px-0 border-0">
+            <header class="content__title px-0 border-0">
                 <div class="row">
-                    <div class="col-12 card">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-12 trip-stats">
-                                <img src="/images/family-taxi.jpg" class="dashboard-image">
-                            </div>
-
-                            <div class="col-lg-9 col-sm-12">
-                                <div class="row">
-                                    <div class="col-12 p-4">
-                                        <h3 class="trip-performance">Trip Performance</h3>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-12" style="border-right: 1px solid grey;">
-                                        <div class="trip-stats">
-                                            <div class="ml-4">
-                                                <span class="font-12">Live Trips</span>
-                                                <h4 class="mt-1 mb-0 font-weight-medium">8,950</h4>
-                                            </div>
-                                            <div class="icon-in-bg">
-                                                <span class="text-danger"><i class="zmdi zmdi-trending-down mx-2"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-12" style="border-right: 1px solid grey;">
-                                        <div class="trip-stats">
-                                            <div class="ml-4">
-                                                <span class="font-12">Scheduled Trips</span>
-                                                <h4 class="mt-1 mb-0 font-weight-medium">8,950</h4>
-                                            </div>
-                                            <div class="icon-in-bg">
-                                                <span class="text-success"><i class="zmdi zmdi-trending-up mx-2"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-12">
-                                        <div class="trip-stats">
-                                            <div class="ml-4">
-                                                <span class="font-12">Completed Trips</span>
-                                                <h4 class="mt-1 mb-0 font-weight-medium">8,950</h4>
-                                            </div>
-                                            <div class="icon-in-bg">
-                                                <span class="text-warning"><i class="zmdi zmdi-trending-up mx-2"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                    <div class="col-md-5 col-sm-12">
+                        <span class="rev-title-container">
+                            <h1 class="text-capitalize stream_name m-0">Schedule A pickup</h1>
+                           </span>
+                        <div class="">
+                            <ol class="breadcrumb border-0">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item">Bookings</li>
+                                <li class="breadcrumb-item active">Schedule Pickups</li>
+                            </ol>
 
                         </div>
                     </div>
-
-                    <div class="col-12 card card-dash-2">
-                        <div class="row">
-                            <div class="stat-img-dash">
-                                <img src="images/dashboardImages/taxi.svg" class="dashboard-image">
-                            </div>
-
-                            <div class="col-lg-12 col-sm-12">
-                                <div class="row">
-                                    <div class="col-md-4 revenue-col">
-                                        <div class="col-12 py-4 stats-body">
-                                            <h3 class="trip-performance font-12">Revenue overview</h3>
-                                        </div>
-                                        <div class="col-12" style="border-right: 1px solid #141b263b;">
-                                            <div class="trip-stats trips-money">
-                                                <span class="cur-icon">
-                                                    <i class="mdi mdi-currency-usd"></i>
-                                                </span>
-                                                <div class="">
-                                                    <span class="trip-stat-title">Generated revenue</span>
-                                                    <h4 class="mt-0 mb-0 font-weight-medium font-weight-light">KES 465,900,234</h4>
-                                                </div>
-
-                                            </div>
-                                            <div class="trip-money-stats">
-                                                <span>+36,023</span>
-                                                <span><i class="mdi mdi-arrow-up-thick"></i>23%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="row">
-                                            <div class="col-12 py-4 stats-body">
-                                                <h3 class="trip-performance font-12 pl-2rem">Trip Performance</h3>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-12" style="border-right: 1px solid #141b263b;">
-                                                <div class="trip-stats">
-                                                    <div class="">
-                                                        <span class="trip-stat-title">Live Trips</span>
-                                                        <h4 class="mt-1 mb-0 font-weight-medium">KES 465,900</h4>
-                                                    </div>
-                                                    <div class="icon-in-bg">
-                                                        <span class="text-danger"><i class="zmdi zmdi-trending-down mx-2"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-12" style="border-right:1px solid #141b263b;">
-                                                <div class="trip-stats">
-                                                    <div class="">
-                                                        <span class="trip-stat-title">Assigned Trips</span>
-                                                        <h4 class="mt-1 mb-0 font-weight-medium">KES 11,526</h4>
-                                                    </div>
-                                                    <div class="icon-in-bg">
-                                                        <span class="text-success"><i class="zmdi zmdi-trending-up mx-2"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-12">
-                                                <div class="trip-stats">
-                                                    <div class="">
-                                                        <span class="trip-stat-title">Completed Trips</span>
-                                                        <h4 class="mt-1 mb-0 font-weight-medium">KES 123,032</h4>
-                                                    </div>,
-                                                    <div class="icon-in-bg">
-                                                        <span class="text-warning"><i class="zmdi zmdi-trending-up mx-2"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
+                </div>
+            </header>
 
 
-                    <div class="col-sm-12 col-md-6 px-0">
-                        <div class="card">
-                            <div class="card-header bg-white">
-                                <h3 class="card-title">Driving Distance</h3>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="d-flex align-items-start flex-column">
-                                    <small>Avg Distance Driven</small>
-                                    <h4>1,000 Km/h</h4>
-                                </div>
-                                <div id="driven_distance" style="height: 200px; margin-top: 20px;"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-sm-12 col-md-6 pr-0">
-                        <div class="card">
-                            <div class="card-header bg-white">
-                                <h3 class="card-title">Revenue Stats</h3>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="d-flex align-items-start flex-column">
-                                    <small>Avg Revenue</small>
-                                    <h4>KES 15,000</h4>
-                                </div>
-                                <div id="ZonalRevenueCollection" style="height: 200px; margin-top: 20px;"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 px-0">
-                        <div class="card">
-                            <div class="card-header bg-white">
-                                <h3 class="card-title">Drivers' Schedules Rides</h3>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div id="booking_calendar" style="height: 400px;"></div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-12 col-lg-4 px-0">
-                        <div class="card">
-                            <div class="card-header bg-white">
-                                <h3 class="card-title">Taxi Utilization</h3>
+            <div class="row with-custom-header">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-sm-12" style="margin-bottom: 2.2rem;">
+                    <div class="account-info h-100">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h4 class="card-title">Passenger's particular's</h4>
                             </div>
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-7 col-md-5 col-sm-12">
-                                        <div id="taxi_utilization" style="height: 200px;"></div>
+                                <form class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label><strong>Passenger's name</strong></label>
+                                            <input type="text" class="form-control" placeholder="Eg Jane Doe">
+                                            <small>Enter the passenger's full names</small>
+
+                                        </div>
                                     </div>
 
-                                    <div class="col-lg-5 col-md-7 col-sm-12">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-6 py-2">
-                                                <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="mr-2 text-info">
-                                                        <i class="mdi mdi-car font-36"></i>
-                                                    </div>
-                                                    <div class="">
-                                                        <small>Utilized</small>
-                                                        <h6 class="m-0 p-0">81.6%</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-6 py-2">
-                                                <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="mr-2 text-warning">
-                                                        <i class="mdi mdi-car font-36"></i>
-                                                    </div>
-                                                    <div class="">
-                                                        <small>Unutilized</small>
-                                                        <h6 class="m-0 p-0">18.4%</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label><strong>Passenger's phone</strong></label>
+                                            <input type="text" class="form-control" placeholder="Phone No.">
+                                            <small>Phone No. to be contacted with</small>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label><strong>Where to</strong></label>
+                                            <select class="form-control selectpicker">
+                                                <option>Nakuru</option>
+                                                <option>Kissi</option>
+                                                <option>Nairobi</option>
+                                                <option>Nyeri</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label><strong>Travel Date</strong></label>
+                                            <input type="text" class="form-control" placeholder="Enter Phone number">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label><strong>Travel Time</strong></label>
+                                            <input type="text" class="form-control" placeholder="Enter Phone number">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label><strong>Pickup Location</strong></label>
+                                            <select class="form-control selectpicker" live-search="true">
+                                                <option>City hall</option>
+                                                <option>Kobil Thika</option>
+                                                <option>Pickup station</option>
+                                                
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="row">
-                                                <div class="mr-2 text-danger">
-                                                    <i class="mdi mdi-map-marker-distance font-25"></i>
-                                                </div>
-                                                <p class="my-auto">Driving Distance</p>
-                                            </div>
-                                            <p class="my-auto">10,756.5 Km</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="row">
-                                                <div class="mr-2 text-success">
-                                                    <i class="mdi mdi-steering font-25"></i>
-                                                </div>
-                                                <p class="my-auto">Driving Time</p>
-                                            </div>
-                                            <p class="my-auto">10,755 Km</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="row">
-                                                <div class="mr-2 text-warning">
-                                                    <i class="mdi mdi-speedometer font-25"></i>
-                                                </div>
-                                                <p class="my-auto">Avg Speed</p>
-                                            </div>
-                                            <p class="my-auto">1,076.5 Km</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="row">
-                                                <div class="mr-2 text-danger">
-                                                    <i class="mdi mdi-close-circle-outline font-25"></i>
-                                                </div>
-                                                <p class="my-auto">Stoppage Time</p>
-                                            </div>
-                                            <p class="my-auto">10,756.5 Km</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="row">
-                                                <div class="mr-2 text-info">
-                                                    <i class="mdi mdi-clock-time-two-outline font-25"></i>
-                                                </div>
-                                                <p class="my-auto">Usage Time</p>
-                                            </div>
-                                            <p class="my-auto">300h 30m</p>
-                                        </div>
-
+                                        <label><strong>Select preferred sits</strong></label>
+                                        <p><small>Select the sits the client would like to be reserved for him plus any other passengers ghe is paying for.</small></p>
                                     </div>
-                                </div>
+
+                                    <div class="col-9 mb-4">
+                                        <div class="text-uppercase d-flex justify-content-between">
+                                            <small><strong>Front</strong></small>
+                                            <small><strong>Back</strong></small>
+                                        </div>
+                                        <div class="the--car-selector">
+                                            <div class="">
+
+                                                <div class="car-sits">
+
+                                                    <!-- front side -->
+                                                    <div class="sits-column">
+                                                        <div class="single-sit forbiden-sit text-danger">D.<img src="images/Car-booking/staring.svg"></div>
+                                                        <label for="sit1" class="single-sit available-sit">1.<img src="images/Car-booking/available.svg"></label>
+                                                        <input type="checkbox" class="d-none" id="sit1" value="1">
+                                                    </div>
+
+                                                    <!-- column 1 -->
+                                                    <div class="sits-column">
+                                                        <div class="mb-4">
+
+                                                            <!-- sit four -->
+                                                            <label class="single-sit taken-sit" for="sit4">4.<img src="images/Car-booking/booked.svg"></label>
+                                                            <!-- check box for sit four the checkbox is disabled for forbidden and booked sits -->
+
+                                                            <input type="checkbox" class="d-none" id="sit4" value="4" disabled>
+
+                                                            <label class="single-sit forbiden-sit text-danger " for="sit3">3.<img src="images/Car-booking/forbiden.svg"></label>
+                                                            <input type="checkbox" class="d-none" id="sit3" value="3" disabled>
+                                                        </div>
+
+                                                        <label for="sit2" class="single-sit available-sit">
+                                                            2.<img src="images/Car-booking/available.svg">
+                                                        </label>
+                                                        <input type="checkbox" class="d-none" id="sit2" value="2">
+
+
+                                                    </div>
+
+                                                    <!-- column 2 -->
+                                                    <div class="sits-column">
+                                                        <div class="mb-4">
+                                                            <label class="single-sit available-sit" for="sit7">7.<img src="images/Car-booking/available.svg"></label>
+                                                            <input type="checkbox" class="d-none" id="sit7" value="7">
+                                                            <label class="single-sit forbiden-sit text-danger" for="sit6">6.<img src="images/Car-booking/forbiden.svg"></label>
+                                                            <input type="checkbox" class="d-none" id="sit6" value="6" disabled>
+                                                        </div>
+                                                        <label class="single-sit available-sit" for="sit5">
+                                                            5.<img src="images/Car-booking/available.svg">
+                                                        </label>
+                                                        <input type="checkbox" class="d-none" id="sit5" value="5">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-3 d-flex align-items-end mb-4">
+                                        <ul class="list-group car-key">
+                                            <li class="list-group-item"><img src="images/Car-booking/available.svg" class="mr-2 img">Available</li>
+                                            <li class="list-group-item"><img src="images/Car-booking/booked.svg" class="mr-2">Booked</li>
+                                            <li class="list-group-item"><img src="images/Car-booking/forbiden.svg" class="mr-2">forbiden</li>
+                                            <li class="list-group-item"><img src="images/Car-booking/selected.svg" class="mr-2">selected</li>
+                                            <li class="list-group-item"><img src="images/Car-booking/staring.svg" class="mr-2">Driver</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="bg-light-green p-3 mb-4">
+                                            <table class="table table-bordered invoice__table mb-0">
+                                                <thead>
+                                                    <tr class="text-uppercase font-weight-bolder">
+                                                        <th><strong>Unit Cost</strong></th>
+                                                        <th><strong>Pass</strong></th>
+                                                        <th class="text-right"><strong>Total</strong></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="car-price">KES 450</td>
+                                                        <td class="car-passengers">0</td>
+                                                        <td class="text-right">
+                                                            <div class="price-table__price color-purple">
+                                                                <strong class="text-black car-total">KES 0</strong>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label><strong>Mode of payment</strong></label>
+                                            <br>
+                                            <div class="radio radio--inline">
+                                                <input type="radio" name="payment-mode" id="cash-money">
+                                                <label class="radio__label" for="cash-money">Cash</label>
+                                            </div>
+                                            <div class="radio radio--inline">
+                                                <input type="radio" name="payment-mode" id="mobile-money">
+                                                <label class="radio__label" for="mobile-money">Mobile money</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="payment-btns col-12">
+                                        <div class="row">
+                                            <div class="col-12 mpesa-payment-mode animated fade-in d-none">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone number</strong></label>
+                                                            <input type="text" class="form-control" placeholder="MPESA Phone number">
+                                                            <small>Enter the phone number that will be used to make the payment</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="button" class="btn btn-block btn-primary btn--icon-text" data-toggle="modal" data-target="#payment-modal">Next <i class="zmdi zmdi-arrow-right ml-2"></i></button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 cash-money-mode d-none">
+                                                <button type="button" class="btn btn-block btn-primary btn--icon-text">Next <i class="zmdi zmdi-arrow-right ml-2"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-sm-12 col-lg-4">
-                        <div class="card">
-                            <div class="card-header bg-white">
-                                <h3 class="card-title">Vehicles Health</h3>
-                            </div>
-                            <div class="card-body">
-                                <figure class="highcharts-figure">
-                                    <div id="vehicle_health" style="height: 200px;"></div>
-                                    <h4>1st Feb 2021</h4>
-                                </figure>
-                            </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-6">
-                                        <small>Total Vehicles</small>
-                                        <h4 class="mt-1 mb-0 font-weight-medium">850</h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                        <small>Breakdown</small>
-                                        <h4 class="mt-1 mb-0 font-weight-medium">542</h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                        <small>Active Fault</small>
-                                        <h4 class="mt-1 mb-0 font-weight-medium">160</h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                        <small>Unused</small>
-                                        <h4 class="mt-1 mb-0 font-weight-medium">148</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-md-4">
-                        <div class="row">
-                            <div class="col-12 card">
-                                <div class="card-header bg-white">
-                                    <h3 class="card-title">Safety Score</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div id="spline_chart_container" style="height: 120px;"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 card">
-                                <div class="card-header bg-white">
-                                    <h3 class="card-title">Trips Stats</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div id="trips_stats" style="height: 120px;"></div>
-                                </div>
-                            </div>
+                <div class="col-xl-5 col-lg-4 col-md-3 col-sm-12 bus-container-man">
+                    <div class="card">
+                        <div class="bg-bus-stop">
                         </div>
                     </div>
                 </div>
@@ -703,16 +689,15 @@
 
 
     <!-- Highchart Scripts Vendors -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="vendors/highcharts/highchart.js"></script>
 
+    <script src="vendors/highcharts/data.js"></script>
+    <script src="vendors/highcharts/drilldown.js"></script>
+    <script src="vendors/highcharts/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- optional -->
     <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
     <script src="vendors/highcharts/accesibility.js"></script>
     <script src="vendors/highcharts/item-series.js"></script>
@@ -728,16 +713,18 @@
     <script src="js/highcharts/theme1.js"></script>
     <script src="js/highcharts/bullet.js"></script>
 
+    <!-- Vendors: Data tables -->
+    <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+    <script src="vendors/jszip/jszip.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
 
     <!-- HighCharts -->
     <script src="js/chart-data/zonal-revenue-collection.js"></script>
-    <script src="js/chart-data/safety-score.js"></script>
-    <script src="js/chart-data/vehicle-health.js"></script>
-    <script src="js/chart-data/taxi-utilization.js"></script>
-    <script src="js/chart-data/trips-stats.js"></script>
-    <script src="js/chart-data/driven-distance.js"></script>
-    <script src="js/chart-data/booking-calendar.js"></script>
-
+    <script src="js/chart-data/hourly-revenue-collection.js"></script>
+    <script src="js/chart-data/clamped-data.js"></script>
+    <script src="js/chart-data/clamped-detailed.js"></script>
 
     <!-- App functions and actions -->
     <script src="js/app.min.js"></script>
