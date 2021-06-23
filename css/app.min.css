@@ -17961,7 +17961,7 @@ a.badge-white:focus {
     margin-right: 14px;
 }
 .header__logo .the-logo {
-    height: 50px;
+    /* height: 50px; */
 }
 .powerd-container {
     position: absolute;
@@ -18673,12 +18673,16 @@ td .badge {
     /* padding-right: 2rem;*/
     
     background: #ffffffed;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    /* padding-left: 28px; */
 }
 .header__logo img {
     height: 35px;
     margin-right: 1rem;
+}
+.header__logo>a {
+    padding-left: 28px;
 }
 .acc-options .listview__heading a {
     display: flex;
@@ -20804,6 +20808,13 @@ ul.hero_list li:last-child {
 .bus-container-man .card {
     width: 100%;
     height: calc(100% - 31px);
+}
+.header-side {
+    background: #101319;
+}
+.header-side>h1>a {
+    color: #8e95a4;
+    margin-bottom: 0.2rem;
 }
 @media (max-width: 576px) {
     .dont-display-small {

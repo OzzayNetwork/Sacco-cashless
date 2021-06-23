@@ -290,13 +290,13 @@
                 <div class="row">
                     <div class="col-md-5 col-sm-12">
                         <span class="rev-title-container">
-                            <h1 class="text-capitalize stream_name m-0">Unassigned booked rides</h1>
+                            <h1 class="text-capitalize stream_name m-0">Pending pickups</h1>
                            </span>
                         <div class="">
                             <ol class="breadcrumb border-0">
                                 <li class="breadcrumb-item">Home</li>
                                 <li class="breadcrumb-item">Bookings</li>
-                                <li class="breadcrumb-item active">Unassigned bookings</li>
+                                <li class="breadcrumb-item active">Pending pickup</li>
                             </ol>
 
                         </div>
@@ -312,9 +312,9 @@
                             <div class="card-header">
 
                                 <div class="d-flex justify-content-between">
-                                    <h4>Unassigned rides</h4>
+                                    <h4>Pending rides</h4>
                                 </div>
-                                <p>Use the table below to assign passengers to the vehicles, remember to specify sit numbers as well</p>
+                                <p>The table bellow shows the status for the assigned bookings. You can confirm whether a specific assignment was fulfilled</p>
                             </div>
                             <div class="card-body bg-white">
                                 <form>
@@ -338,9 +338,9 @@
                                                             <th>Pickup Location</th>
                                                             <th>Destination</th>
                                                             <th>Time and Date</th>
-                                                            <th>Preferred Seat(s)</th>
                                                             <th>Vehicle</th>
-                                                            <th>Assigned Seats(s)</th>
+                                                            <th>Status</th>
+                                                            <th>Action</th>
                                                         </tr>
                                                     </thead>
 
@@ -348,146 +348,84 @@
 
                                                         <span class="show-sider d-none" data-ma-action="aside-open" data-ma-target=".chat">Details <i class="zmdi zmdi-arrow-right"></i>
                                                            <tr>
-                                                                <td>Alex wanjala <br><span><a href="tel:0704549859">0704549859</a></span></td>
+                                                                <td>Alex wanjala <br><span>
+                                                                    <a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a></span>
+                                                        </td>
                                                         <td>Yato Pickup</td>
                                                         <td>Kisii</td>
                                                         <td>3 Jun 2020 2:30Pm</td>
-                                                        <td>3,4,5</td>
                                                         <td>
-                                                            <select class="selectpicker" data-live-search="true" data-style="btn-light" title="No vehicle assigned" data-width="100%">
-                                                                            <option data-content="<span class='badge badge-primary'>KAD 256T </span> <small class='text-muted'> 1 Seat</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-info'>KAD 256T </span><small class='text-muted'> 5 seats</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-secondary'>KAD 256T </span><small class='text-muted'> 2 Seats</small>">KAD 256T</option>
-                                                                        </select>
+                                                            <span class='badge badge-warning'>KAD 256T </span>
+                                                            <br>
+                                                            <span><a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a> <small class="text-muted">Call driver</small></span>
                                                         </td>
                                                         <td>
-                                                            <select class="selectpicker" data-live-search="true" multiple aria-placeholder="Assign seat(s)">
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>1</span>">1</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>2</span>">2</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>3</span>">3</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>4</span>">4</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>5</span>">5</option>
-                                                                    </select>
+                                                            Car Headed to pickup
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-success btn--icon-text"><i class="zmdi zmdi-check-all"></i>Confirm pickup</button>
                                                         </td>
                                                         </tr>
 
                                                         <tr>
-                                                            <td>Alex wanjala <br><span><a href="tel:0704549859">0704549859</a></span></td>
+                                                            <td>Alex wanjala <br><span>
+                                                                <a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a></span>
+                                                            </td>
                                                             <td>Yato Pickup</td>
                                                             <td>Kisii</td>
                                                             <td>3 Jun 2020 2:30Pm</td>
-                                                            <td>3,4,5</td>
                                                             <td>
-                                                                <select class="selectpicker" data-live-search="true" data-style="btn-light" title="No vehicle assigned" data-width="100%">
-                                                                            <option data-content="<span class='badge badge-primary'>KAD 256T </span> <small class='text-muted'> 1 Seat</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-info'>KAD 256T </span><small class='text-muted'> 5 seats</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-secondary'>KAD 256T </span><small class='text-muted'> 2 Seats</small>">KAD 256T</option>
-                                                                        </select>
+                                                                <span class='badge badge-warning'>KAD 256T </span>
+                                                                <br>
+                                                                <span><a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a> <small class="text-muted">Call driver</small></span>
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-live-search="true" multiple aria-placeholder="Assign seat(s)">
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>1</span>">1</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>2</span>">2</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>3</span>">3</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>4</span>">4</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>5</span>">5</option>
-                                                                    </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alex wanjala <br><span><a href="tel:0704549859">0704549859</a></span></td>
-                                                            <td>Yato Pickup</td>
-                                                            <td>Kisii</td>
-                                                            <td>3 Jun 2020 2:30Pm</td>
-                                                            <td>3,4,5</td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" data-style="btn-light" title="No vehicle assigned" data-width="100%">
-                                                                            <option data-content="<span class='badge badge-primary'>KAD 256T </span> <small class='text-muted'> 1 Seat</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-info'>KAD 256T </span><small class='text-muted'> 5 seats</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-secondary'>KAD 256T </span><small class='text-muted'> 2 Seats</small>">KAD 256T</option>
-                                                                        </select>
+                                                                Car still at the stage
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-live-search="true" multiple aria-placeholder="Assign seat(s)">
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>1</span>">1</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>2</span>">2</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>3</span>">3</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>4</span>">4</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>5</span>">5</option>
-                                                                    </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alex wanjala <br><span><a href="tel:0704549859">0704549859</a></span></td>
-                                                            <td>Yato Pickup</td>
-                                                            <td>Kisii</td>
-                                                            <td>3 Jun 2020 2:30Pm</td>
-                                                            <td>3,4,5</td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" data-style="btn-light" title="No vehicle assigned" data-width="100%">
-                                                                            <option data-content="<span class='badge badge-primary'>KAD 256T </span> <small class='text-muted'> 1 Seat</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-info'>KAD 256T </span><small class='text-muted'> 5 seats</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-secondary'>KAD 256T </span><small class='text-muted'> 2 Seats</small>">KAD 256T</option>
-                                                                        </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" multiple aria-placeholder="Assign seat(s)">
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>1</span>">1</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>2</span>">2</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>3</span>">3</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>4</span>">4</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>5</span>">5</option>
-                                                                    </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alex wanjala <br><span><a href="tel:0704549859">0704549859</a></span></td>
-                                                            <td>Yato Pickup</td>
-                                                            <td>Kisii</td>
-                                                            <td>3 Jun 2020 2:30Pm</td>
-                                                            <td>3,4,5</td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" data-style="btn-light" title="No vehicle assigned" data-width="100%">
-                                                                            <option data-content="<span class='badge badge-primary'>KAD 256T </span> <small class='text-muted'> 1 Seat</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-info'>KAD 256T </span><small class='text-muted'> 5 seats</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-secondary'>KAD 256T </span><small class='text-muted'> 2 Seats</small>">KAD 256T</option>
-                                                                        </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" multiple aria-placeholder="Assign seat(s)">
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>1</span>">1</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>2</span>">2</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>3</span>">3</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>4</span>">4</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>5</span>">5</option>
-                                                                    </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alex wanjala <br><span><a href="tel:0704549859">0704549859</a></span></td>
-                                                            <td>Yato Pickup</td>
-                                                            <td>Kisii</td>
-                                                            <td>3 Jun 2020 2:30Pm</td>
-                                                            <td>3,4,5</td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" data-style="btn-light" title="No vehicle assigned" data-width="100%">
-                                                                            <option data-content="<span class='badge badge-primary'>KAD 256T </span> <small class='text-muted'> 1 Seat</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-info'>KAD 256T </span><small class='text-muted'> 5 seats</small>">KAD 256T</option>
-                                                                            <option data-content="<span class='badge badge-secondary'>KAD 256T </span><small class='text-muted'> 2 Seats</small>">KAD 256T</option>
-                                                                        </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="selectpicker" data-live-search="true" multiple aria-placeholder="Assign seat(s)">
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>1</span>">1</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>2</span>">2</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>3</span>">3</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>4</span>">4</option>
-                                                                        <option data-content="<span class='checkbox__char bg-warning'>5</span>">5</option>
-                                                                    </select>
+                                                                <button class="btn btn-success btn--icon-text"><i class="zmdi zmdi-check-all"></i>Confirm pickup</button>
                                                             </td>
                                                         </tr>
 
+                                                        <tr>
+                                                            <td>Alex wanjala <br><span>
+                                                                <a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a></span>
+                                                            </td>
+                                                            <td>Yato Pickup</td>
+                                                            <td>Kisii</td>
+                                                            <td>3 Jun 2020 2:30Pm</td>
+                                                            <td>
+                                                                <span class='badge badge-warning'>KAD 256T </span>
+                                                                <br>
+                                                                <span><a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a> <small class="text-muted">Call driver</small></span>
+                                                            </td>
+                                                            <td>
+                                                                Car still at the stage
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn btn-success btn--icon-text"><i class="zmdi zmdi-check-all"></i>Confirm pickup</button>
+                                                            </td>
+                                                        </tr>
 
+                                                        <tr>
+                                                            <td>Alex wanjala <br><span>
+                                                                <a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a></span>
+                                                            </td>
+                                                            <td>Yato Pickup</td>
+                                                            <td>Kisii</td>
+                                                            <td>3 Jun 2020 2:30Pm</td>
+                                                            <td>
+                                                                <span class='badge badge-warning'>KAD 256T </span>
+                                                                <br>
+                                                                <span><a href="tel:0704549859" class="btn btn-info btn--icon-text mt-2"><i class="zmdi zmdi-phone"></i>0704549859</a> <small class="text-muted">Call driver</small></span>
+                                                            </td>
+                                                            <td>
+                                                                Car still at the stage
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn btn-success btn--icon-text"><i class="zmdi zmdi-check-all"></i>Confirm pickup</button>
+                                                            </td>
+                                                        </tr>
                                                     </tbody>
 
                                                 </table>

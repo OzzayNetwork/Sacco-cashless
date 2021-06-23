@@ -60,7 +60,15 @@
                 </div>
             </div>
 
-            <div class="header__logo">
+            <div class="header__logo hidden-sm-down">
+                <a href="index.html" class="ml-0 pl-0"><img class="the-logo" src="images/sacco-progfile.jpg"></a>
+                <h1>
+                    <a href="index.html" class="mb-3">FleetFix Sacco</a>
+                    <p class="mb-0 text-white font-weight-light text-capitalize font-12px">Nouveta Sacco LTD.</p>
+                </h1>
+            </div>
+
+            <div class="header__logo d-none">
                 <img src="demo/img/logo-files/logo-white_swed.png" class="img-fluid">
             </div>
 
@@ -74,13 +82,14 @@
 
             <ul class="top-nav">
                 <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
-                <li class="hidden-xs-down"><a href="scheduled-rides.html"><i class="zmdi zmdi-calendar-note"></i></a></li>
                 <li class="hidden-xs-down mr-1 ml-1"><a href="#"><i class="zmdi zmdi-notifications-active"></i></a></li>
-                <li class="hidden-xs-down mr-1 ml-1"> <a href="#" class="p-3"><i class="zmdi zmdi-file-text mr-2"></i></a></li>
+                <li>
+                    <button class="btn btn-info btn--icon-text btn-sm"><i class="zmdi zmdi-arrow-left"></i>Check In Vehicle</button>
+                </li>
 
-
-
-
+                <li>
+                    <button class="btn btn-danger btn--icon-text btn-sm">Check Out Vehicle <i class="zmdi zmdi-arrow-right"></i></button>
+                </li>
                 <li class="dropdown">
                     <a href="#" data-toggle="dropdown" class="rad-50"><img src="demo/img/profile-pics/1.jpg" class="listview__img m-0" style="height: 32px;" alt="profile picture"></a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
@@ -123,25 +132,19 @@
         </header>
 
         <aside class="sidebar px-0 pt-0">
-            <div class="header__logo sidebar_logo">
+
+            <div class="header__logo hidden-sm-down header-side">
+                <a href="index.html"><img class="the-logo user__img" src="images/sacco-progfile.jpg"></a>
+                <h1 class="m-0 p-0 d-flex flex-column">
+                    <a href="index.html" class="">FleetFix Sacco</a>
+                    <p class="mb-0 text-white font-weight-light text-capitalize font-12px">Nouveta Sacco LTD</p>
+                </h1>
+            </div>
+
+            <div class="header__logo sidebar_logo d-none">
                 <img src="demo/img/logo-files/swdkenlogo.png" class="img-fluid">
             </div>
             <div class="scrollbar-inner">
-                <div class="user">
-                    <div class="user__info" data-toggle="dropdown">
-                        <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
-                        <div>
-                            <div class="user__name">Malinda Hollaway</div>
-                            <div class="user__email">malinda-h@gmail.com</div>
-                        </div>
-                    </div>
-
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">View Profile</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </div>
 
                 <ul class="navigation">
                     <li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart"></i>overview</a></li>
@@ -160,6 +163,20 @@
                     </li>
 
                     <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-circle-multiple-outline"></i>Entities <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul class="">
+                            <li><a href="owners.html"><i class="mdi mdi-account-multiple-outline mx-2"></i>Owners</a></li>
+                            <li><a href="all_vehicles.html"><i class="mdi mdi-car mx-2"></i>Vehicles</a></li>
+                            <li><a href="drivers.html"><i class="mdi mdi-car-key mx-2"></i>Drivers</a></li>
+                            <li><a href="stages.html"><i class="mdi mdi-account-group-outline mx-2"></i>Stages</a></li>
+                            <li><a href="trips.html"><i class="mdi mdi-folder-multiple-outline mx-2"></i>Trips/routes</a></li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <li class="navigation__sub">
                         <a href="#"><i class="mdi mdi-car-settings"></i>Bookings<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                         <ul class="">
                             <li><a href="pickup-schedule.html"><i class="mdi mdi-car-3-plus mx-2"></i>Schedule a pickup</a></li>
@@ -169,56 +186,6 @@
                             <li><a href="#"><i class="mdi mdi-car-key mx-2"></i>Assigned pickups</a></li>
                             <li><a href="#"><i class="mdi mdi-car-key mx-2"></i>Fulfilled pickups</a></li>
                             <li><a href="#"><i class="mdi mdi-car-key mx-2"></i>All pickups</a></li>
-                        </ul>
-                    </li>
-                    <li class="navigation__sub">
-                        <a href="#"><i class="mdi mdi-folder-edit-outline"></i>Packages <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul class="">
-                            <li><a href="packages-setup.html"><i class="mdi mdi-folder-edit-outline mx-2"></i>Packages</a></li>
-                            <li><a href="packages.html"><i class="mdi mdi-folder-multiple-outline mx-2"></i>Packages List</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="navigation__sub"><a href="#"><i class="mdi mdi-car"></i>Vehicles <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul class="">
-                            <li class="navigation__sub">
-                                <a href="#"><i class="mdi mdi-car-traction-control mx-2"></i>Rides <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                                <ul class="ml-4">
-                                    <li><a href="scheduled-rides.html"><i class="zmdi zmdi-check mx-2"></i>Scheduled Rides</a></li>
-                                    <li><a href="requested-rides.html"><i class="zmdi zmdi-check mx-2"></i>Requested Rides</a></li>
-                                    <li><a href="completed-rides.html"><i class="zmdi zmdi-check mx-2"></i>Completed Rides</a></li>
-                                    <li><a href="assigned-rides.html"><i class="zmdi zmdi-check mx-2"></i>Assigned Rides</a></li>
-                                    <li><a href="unassigned-rides.html"><i class="zmdi zmdi-check mx-2"></i>Unassigned Rides</a></li>
-                                    <li><a href="accepted-rides.html"><i class="zmdi zmdi-check mx-2"></i>Accepted Rides</a></li>
-                                    <li><a href="cancelled-rides.html"><i class="zmdi zmdi-check mx-2"></i>Cancelled Rides</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="navigation__sub">
-                                <a href="#"><i class="mdi mdi-tools mx-2"></i>Maintenance <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                                <ul class="ml-4">
-                                    <li><a href="schedule-maintenance.html"><i class="zmdi zmdi-check mx-2"></i>Create</a></li>
-                                    <li><a href="scheduled-maintenance.html"><i class="zmdi zmdi-check mx-2"></i>Schedule</a></li>
-                                    <li><a href="under-maintenance.html"><i class="zmdi zmdi-check mx-2"></i>Under Maintenance</a></li>
-                                    <li><a href="maintenance-recommendations.html"><i class="zmdi zmdi-check mx-2"></i>Recommendations</a></li>
-                                    <li><a href="maintenance-history.html"><i class="zmdi zmdi-check mx-2"></i>History</a></li>
-                                </ul>
-                            </li>
-                            <li class="navigation__sub">
-                                <a href="#"><i class="mdi mdi-fuel mx-2"></i>Fueling <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                                <ul class="ml-4">
-                                    <li><a href="create-fueling-stations.html"><i class="zmdi zmdi-check mx-2"></i>Register</a></li>
-                                    <li><a href="fueling-stations.html"><i class="zmdi zmdi-check mx-2"></i>Stations</a></li>
-                                    <li><a href="fueling-history.html"><i class="zmdi zmdi-check mx-2"></i>History</a></li>
-                                </ul>
-                            </li>
-                            <li class="navigation__sub">
-                                <a href="#"><i class="mdi mdi-circle-multiple-outline mx-2"></i>Assigning <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                                <ul class="ml-4">
-                                    <li><a href="assign-vehicles.html"><i class="mdi mdi-circle-edit-outline mx-2"></i>Assign</a></li>
-                                    <li><a href="unassign-vehicles.html"><i class="mdi mdi-circle-off-outline mx-2"></i>Unassigned</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
 
