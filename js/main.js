@@ -1586,6 +1586,18 @@ function addNewClone() {
 
 }
 
+$('body').on('change', '[name="owner-settlement"]', function() {
+    var theChoice = $(this).val();
+
+    if (theChoice == "Fixed") {
+        $('.fig-opt').removeClass('d-none').siblings().addClass('d-none')
+
+    }
+    if (theChoice == "percentage") {
+        $('.per-opt').removeClass('d-none').siblings().addClass('d-none')
+    }
+})
+
 
 
 $('body').on('keyup', '.searchPicker .bs-searchbox input', function() {

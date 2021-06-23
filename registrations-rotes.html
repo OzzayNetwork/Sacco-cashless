@@ -371,7 +371,7 @@ f
                             </div>
                             <div class="card-body">
                                 <form class="row">
-                                    <div class="col-12">
+                                    <div class="col-sm-12 col-md-6">
                                         <div class="form-group">
                                             <label><strong>From</strong></label>
                                             <select class="form-control selectpicker searchPicker form-control show-tickr" data-live-search="true" title="Select Origin name">
@@ -384,7 +384,7 @@ f
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="col-sm-12 col-md-6">
                                         <div class="form-group">
                                             <label><strong>Destination</strong></label>
                                             <select class="form-control selectpicker searchPicker form-control show-tickr" data-live-search="true" title="Select Destination name">
@@ -397,11 +397,70 @@ f
                                         </div>
                                     </div>
                                     <div class="col-12">
+                                        <hr>
+                                    </div>
+
+                                    <div class="col-12">
                                         <div class="form-group">
-                                            <label><strong>Fare charges per sit</strong></label>
-                                            <input type="text" class="form-control" placeholder="Enter charges" title="Select ">
+                                            <label class="mb-0 pb-0"><strong>Car owner settlement</strong></label>
+                                            <p class="mb-0 pb-0"><small>How will the owner of a vehicle be paid for the trips?</small></p>
+
+                                            <div class="radio radio--inline mb-3">
+                                                <input type="radio" name="owner-settlement" id="fixed-settlement" value="Fixed" checked>
+                                                <label class="radio__label" for="fixed-settlement"><strong>Fixed cash</strong></label>
+                                            </div>
+
+                                            <div class="radio radio--inline mb-3">
+                                                <input type="radio" name="owner-settlement" id="per-settlement" value="percentage">
+                                                <label class="radio__label" for="per-settlement"><strong>Percentage</strong></label>
+                                            </div>
+
+                                            <div class="row pt-3">
+
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-12 fig-opt">
+                                                            <div class="form-group">
+                                                                <label><strong>Amount in figures</strong></label>
+                                                                <input type="text" class="form-control" placeholder="Enter settlement amount">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 per-opt d-none">
+                                                            <div class="form-group">
+                                                                <label><strong>Percentage settlement</strong></label>
+                                                                <input type="text" class="form-control" placeholder="%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-12 col-md-6 ">
+                                                    <div class="form-group">
+                                                        <label><strong>Fare charges per sit</strong></label>
+                                                        <input type="text" class="form-control bg-light" placeholder="Enter charges" title="Select ">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="mb-0 pb-0"><strong>Nature of the trip</strong></label>
+                                                    <p><small>Is a trip considered as a <strong>To</strong> and <strong>From</strong> trip or a <strong>single one way</strong> trip is considered as a single trip</small></p>
+                                                    <div class="radio radio--inline">
+                                                        <input type="radio" name="owner-settlement" id="one-way-settlement" value="" checked>
+                                                        <label class="radio__label" for="one-way-settlement"><strong>Single One way</strong></label>
+                                                    </div>
+
+                                                    <div class="radio radio--inline">
+                                                        <input type="radio" name="owner-settlement" id="double-way-settlement" value="">
+                                                        <label class="radio__label" for="double-way-settlement"><strong>To and Fro</strong></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
+
 
                                     <div class="col-12">
                                         <button class="btn btn-primary btn-block  btn--icon-text"><i class="zmdi zmdi-plus"></i> Add route</button>

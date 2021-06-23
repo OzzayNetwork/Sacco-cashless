@@ -12441,7 +12441,7 @@ textarea {
 
 .header,
 .header__logo>h1>a {
-    color: #104926;
+    color: #161b26;
 }
 
 .header {
@@ -12549,7 +12549,7 @@ textarea {
 .top-nav>li {
     display: inline-block;
     vertical-align: middle;
-    border-right: 1px solid #80808059;
+    /* border-right: 1px solid #80808059; */
     padding-right: 1rem;
 }
 
@@ -12559,7 +12559,7 @@ textarea {
 }
 
 .top-nav>li:first-child {
-    border-left: 1px solid #80808059;
+    /* border-left: 1px solid #80808059; */
     padding-left: 1rem;
 }
 
